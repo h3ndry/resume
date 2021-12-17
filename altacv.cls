@@ -299,6 +299,18 @@
   \medskip\normalsize
 }
 
+
+% v1.1.4: fixes inconsistent font size
+\newcommand{\cvproj}[4]{%
+  {\large\color{emphasis}#1\par}
+  \smallskip\normalsize
+  \ifstrequal{#2}{}{}{
+  {#2}\par
+  \smallskip}
+  \ifstrequal{#3}{}{}{{\makebox[0.5\linewidth][l]{\faGlobe~#3}}}\par%
+  \medskip\normalsize
+}
+
 \newcommand{\cvachievement}[3]{%
   \begin{tabularx}{\linewidth}{@{}p{2em} @{\hspace{1ex}} >{\raggedright\arraybackslash}X@{}}
   \multirow{2}{*}{\Large\color{accent}#1} & \bfseries\textcolor{emphasis}{#2}\\
@@ -380,12 +392,13 @@
     \endgroup
 }
 
-\newcommand{\cvref}[3]{%
+\newcommand{\cvref}[4]{%
   \smallskip
   \textcolor{emphasis}{\textbf{#1}}\par
-  \begin{description}[font=\color{accent},style=multiline,leftmargin=1.35em,align=left]
+  \begin{description}[style=multiline,leftmargin=1.35em,align=left]
   \item[\small\normalfont\emailsymbol] #2
   \item[\small\normalfont\mailaddresssymbol] #3
+  \item[\small\normalfont\faPhone] #4
   \end{description}
 %   \medskip
 }

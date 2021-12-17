@@ -14,12 +14,12 @@
 %% Use the "normalphoto" option if you want a normal photo instead of cropped to a circle
 % \documentclass[10pt,a4paper,normalphoto]{altacv}
 
-\documentclass[10pt,a4paper,ragged2e,withhyper]{altacv}
+\documentclass[16pt,a4paper,ragged2e,withhyper]{altacv}
 %% AltaCV uses the fontawesome5 and packages.
 %% See http://texdoc.net/pkg/fontawesome5 for full list of symbols.
 
 % Change the page layout if you need to
-\geometry{left=1.25cm,right=1.25cm,top=1.5cm,bottom=1.5cm,columnsep=1.2cm}
+\geometry{left=1.25cm,right=1.25cm,top=1.5cm,bottom=1.5cm,columnsep=1cm}
 
 % The paracol package lets you typeset columns of text in parallel
 \usepackage{paracol}
@@ -56,7 +56,7 @@
 
 % Change some fonts, if necessary
 \renewcommand{\namefont}{\Huge\rmfamily\bfseries}
-\renewcommand{\personalinfofont}{\footnotesize}
+\renewcommand{\personalinfofont}{\normalsize}
 \renewcommand{\cvsectionfont}{\LARGE\rmfamily\bfseries}
 \renewcommand{\cvsubsectionfont}{\large\bfseries}
 
@@ -77,23 +77,24 @@
 %% sample.bib contains your publications
 \addbibresource{sample.bib}
 \begin{document}
-\name{Your Name Here}
-\tagline{Your Position or Tagline Here}
+\name{Simanga H. Khoza}
+\tagline{}
 %% You can add multiple photos on the left or right
-\photoR{2.8cm}{Globe_High}
+% \photoR{2.8cm}{Globe_High}
 % \photoL{2.5cm}{Yacht_High,Suitcase_High}
 
 \personalinfo{%
   % Not all of these are required!
-  \email{your_name@email.com}
-  \phone{000-00-0000}
-  \mailaddress{Åddrésş, Street, 00000 Cóuntry}
-  \location{Location, COUNTRY}
-  \homepage{www.homepage.com}
-  \twitter{@twitterhandle}
-  \linkedin{your_id}
-  \github{your_id}
-  \orcid{0000-0000-0000-0000}
+  \email{h3khoza@gmail.com} \hspace{.5cm}
+  \homepage{https://hendry.xyz} \hspace{.6cm}
+  \linkedin{https://linkedin.com/in/h3ndry/} \newline
+  \phone{+27 81 249 0306} \hspace{.9cm}
+  \location{Pretoria, Gauteng, RSA} 
+  \github{https://github.com/h3ndry}
+
+  % \mailaddress{Åddrésş, Street, 00000 Cóuntry}
+  % \twitter{@twitterhandle}
+  % \orcid{0000-0000-0000-0000}
   %% You can add your own arbitrary detail with
   %% \printinfo{symbol}{detail}[optional hyperlink prefix]
   % \printinfo{\faPaw}{Hey ho!}[https://example.com/]
@@ -119,155 +120,194 @@
 % \AtBeginEnvironment{itemize}{\small}
 
 %% Set the left/right column width ratio to 6:4.
-\columnratio{0.6}
+\columnratio{0.55}
 
 % Start a 2-column paracol. Both the left and right columns will automatically
 % break across pages if things get too long.
 \begin{paracol}{2}
+
+\cvsection{OBJECTIVE}
+
+\begin{quote}
+``        Secure a responsible career opportunity to fully utilize my training and
+        skills, while making a significant contribution to the success of the
+        company
+''
+\end{quote}
+
 \cvsection{Experience}
 
-\cvevent{Job Title 1}{Company 1}{Month 20XX -- Ongoing}{Location}
+\cvevent{Intern : Software Developer}{The Horizon HR}{Mar 2021 -- Dec 2021}{Midrand}
 \begin{itemize}
-\item Job description 1
-\item Job description 2
+\item Debug an MVC Web application using Visual studio.
+\item Experimenting with design elements.
+\item Review other engineers’ code, test software applications, and patches, and implement changes and updates when necessary.
 \end{itemize}
+
+\cvsection{Education}
+
+\cvevent{N.Dip Computer Systems Engineering}{ Tshwane University of Technology}{2018 -- 2020}{}
+Achieve 4 distinction in Object-oriented Programming and Computer Skills. \newline
+Pass Digital Systems, Electrical Engineering, Electronics, Mathematics, Network systems and more first try
 
 \divider
 
-\cvevent{Job Title 2}{Company 2}{Month 20XX -- Ongoing}{Location}
-\begin{itemize}
-\item Job description 1
-\item Job description 2
-\end{itemize}
+\cvevent{High School Diploma}{Sincobile Secondary School}{2009 --- 2013}{}
+ Achieve a distinction in Mathematics and leve 6 and 5 in Physical Sciences, Geography, Life Sciences, Agricultural Sciences, English First Additional Language, SiSwati Home Language, Life Orientation
 
-\cvsection{Projects}
 
-\cvevent{Project 1}{Funding agency/institution}{}{}
-\begin{itemize}
-\item Details
-\end{itemize}
+\cvsection{CERTIFICATIONS}
+
+\cvachievement{\faTrophy}{Microsoft Certified: Azure DevOps Engineer Expert}{issued: \hspace{0em} 8 October 2021 \hspace{1cm} \href{https://www.credly.com/badges/80f2454f-f8de-4e74-9575-a01edf459fde}{https://cutt.ly/DRI8NYP} }
 
 \divider
 
-\cvevent{Project 2}{Funding agency/institution}{Project duration}{}
-A short abstract would also work.
+\cvachievement{\faTrophy}{Microsoft Certified: Azure Developer Associate}{issued: \hspace{0.0em} 8 July 2021 \hspace{1cm} \href{https://www.credly.com/badges/2b9449fa-ea3c-4baa-9362-2b1c6f69636e}{https://cutt.ly/tRI4WYo} }
 
-\medskip
+\divider
 
-\cvsection{A Day of My Life}
+\cvachievement{\faTrophy}{Microsoft Certified: Azure Fundamentals}{issued: \hspace{0em} 26 April 2021 \hspace{1cm} \href{https://www.credly.com/badges/eb7f2969-df90-4138-b898-bcb9f57389e1}{https://cutt.ly/sRI3GgJ} }
 
-% Adapted from @Jake's answer from http://tex.stackexchange.com/a/82729/226
-% \wheelchart{outer radius}{inner radius}{
-% comma-separated list of value/text width/color/detail}
-\wheelchart{1.5cm}{0.5cm}{%
-  6/8em/accent!30/{Sleep,\\beautiful sleep},
-  3/8em/accent!40/Hopeful novelist by night,
-  8/8em/accent!60/Daytime job,
-  2/10em/accent/Sports and relaxation,
-  5/6em/accent!20/Spending time with family
-}
+% \medskip
 
-\begin{itemize}[font=\color{accent},widest=\faCode]
-\color{emphasis}
-\item[\faPlaneDeparture] Travelling
-\item[\faCode] Coding for leisure
-\end{itemize}
+% \cvsection{A Day of My Life}
+%
+% % Adapted from @Jake's answer from http://tex.stackexchange.com/a/82729/226
+% % \wheelchart{outer radius}{inner radius}{
+% % comma-separated list of value/text width/color/detail}
+% \wheelchart{1.5cm}{0.5cm}{%
+%   6/8em/accent!30/{Sleep,\\beautiful sleep},
+%   3/8em/accent!40/Hopeful novelist by night,
+%   8/8em/accent!60/Daytime job,
+%   2/10em/accent/Sports and relaxation,
+%   5/6em/accent!20/Spending time with family
+% }
+
+% \begin{itemize}[font=\color{accent},widest=\faCode]
+% \color{emphasis}
+% \item[\faPlaneDeparture] Travelling
+% \item[\faCode] Coding for leisure
+% \end{itemize}
 
 % use ONLY \newpage if you want to force a page break for
 % ONLY the current column
-\newpage
+% \newpage
 
-\cvsection{Publications}
-
-\nocite{*}
-
-\printbibliography[heading=pubtype,title={\printinfo{\faBook}{Books}},type=book]
-
-\divider
-
-\printbibliography[heading=pubtype,title={\printinfo{\faFile*[regular]}{Journal Articles}},type=article]
-
-\divider
-
-\printbibliography[heading=pubtype,title={\printinfo{\faUsers}{Conference Proceedings}},type=inproceedings]
+% \cvsection{Publications}
+%
+% \nocite{*}
+%
+% \printbibliography[heading=pubtype,title={\printinfo{\faBook}{Books}},type=book]
+%
+% \divider
+%
+% \printbibliography[heading=pubtype,title={\printinfo{\faFile*[regular]}{Journal Articles}},type=article]
+%
+% \divider
+%
+% \printbibliography[heading=pubtype,title={\printinfo{\faUsers}{Conference Proceedings}},type=inproceedings]
 
 %% Switch to the right column. This will now automatically move to the second
 %% page if the content is too long.
 \switchcolumn
 
-\cvsection{My Life Philosophy}
+\cvsection{SKILLS}
 
-\begin{quote}
-``Something smart or heartfelt, preferably in one sentence.''
-\end{quote}
-
-\cvsection{Most Proud of}
-
-\cvachievement{\faTrophy}{Fantastic Achievement}{and some details about it}
-
-\divider
-
-\cvachievement{\faHeartbeat}{Another achievement}{more details about it of course}
-
-\divider
-
-\cvachievement{\faHeartbeat}{Another achievement}{more details about it of course}
-
-\cvsection{Strengths}
-
-\cvtag{Hard-working}
-\cvtag{Eye for detail}\\
-\cvtag{Motivator \& Leader}
+\cvevent{ Programming Languages }{}{}{}
+\cvtag{Lua} \cvtag{LaTex} \cvtag{C/C++} \cvtag{JavaScript} \\
+\cvtag{TypeScript} \cvtag{CSS} \cvtag{NoSQL} \cvtag{C\#}
+\cvtag{NodeJS} 
 
 \divider\smallskip
 
-\cvtag{C++}
-\cvtag{Embedded Systems}\\
-\cvtag{Statistical Analysis}
+\cvevent{Patterns \& Frameworks}{}{}{}
+\cvtag{GraphQL} \cvtag{DevOps} \cvtag{Agile} \cvtag{REST} \\
+\cvtag{API} \cvtag{WordPress} \cvtag{ReactJS} \cvtag{Express} \\
+\cvtag{dotnet} \cvtag{Linux} \cvtag{Svelte} \cvtag{SQL} \\
 
-\cvsection{Languages}
+\divider\smallskip
 
-\cvskill{English}{5}
+\cvevent{IT Support \& System Administrator Skills}{}{}{}
+\begin{itemize}
+\item Windows Server
+\item Microsoft office
+\item Firewall (Mimecast, Kerio, Mcafee)
+\item Printers configuration and troubleshooting
+\item Diagnosing and troubleshooting software and hardware issues
+\item Repairing and replacing damaged computer and network components
+\item Installing, configuring and maintaining software and hardware components of computer and network systems
+\end{itemize}
+
+\cvsection{Project}
+
+\cvproj{Music web app}{Plays preview of the top songs from Spotify using REST API}{\href{https://magibela.netlify.app/}{magibela.netlify.app/}}
+
 \divider
 
-\cvskill{Spanish}{4}
-\divider
+\cvproj{Holidays-ZA}{A REST Web API, that returns information about South African holidays.}{\href{https://holidays-za.netlify.app/api}{https://holidays-za.netlify.app/api}}
 
-\cvskill{German}{3.5} %% Supports X.5 values.
+% \divider
+%
+% \cvproj{Music web app}{Plays preview of the top songs from Spotify using REST API}{\href{https://magibela.netlify.app/}{magibela.netlify.app/}}
 
+
+% \cvtag{GraphQL} \cvtag{DevOps} \cvtag{Agile} \cvtag{REST} \\
+% \cvtag{API}
+
+%
+% \cvsection{Most Proud of}
+%
+% \cvachievement{\faTrophy}{Fantastic Achievement}{and some details about it}
+%
+%
+% \cvachievement{\faHeartbeat}{Another achievement}{more details about it of course}
+%
+% \divider
+%
+% \cvachievement{\faHeartbeat}{Another achievement}{more details about it of course}
+%
+% \cvsection{Strengths}
+%
+% \cvtag{Hard-working}
+% \cvtag{Eye for detail}\\
+% \cvtag{Motivator \& Leader}
+%
+% \divider\smallskip
+%
+% \cvtag{C++}
+% \cvtag{Embedded Systems}\\
+% \cvtag{Statistical Analysis}
+%
+% \cvsection{Languages}
+%
+% \cvskill{English}{5}
+% \divider
+%
+% \cvskill{Spanish}{4}
+% \divider
+%
+% \cvskill{German}{3.5} %% Supports X.5 values.
+%
 %% Yeah I didn't spend too much time making all the
 %% spacing consistent... sorry. Use \smallskip, \medskip,
 %% \bigskip, \vspace etc to make adjustments.
 \medskip
 
-\cvsection{Education}
-
-\cvevent{Ph.D.\ in Your Discipline}{Your University}{Sept 2002 -- June 2006}{}
-Thesis title: Wonderful Research
-
-\divider
-
-\cvevent{M.Sc.\ in Your Discipline}{Your University}{Sept 2001 -- June 2002}{}
-
-\divider
-
-\cvevent{B.Sc.\ in Your Discipline}{Stanford University}{Sept 1998 -- June 2001}{}
 
 % \divider
 
 \cvsection{Referees}
 
 % \cvref{name}{email}{mailing address}
-\cvref{Prof.\ Alpha Beta}{Institute}{a.beta@university.edu}
-{Address Line 1\\Address line 2}
+\cvref{Mpho Phahlamohlaka}{Colleague at University}{mphophahhh@gmail.com}
+{064 891 7189}
 
 \divider
 
-\cvref{Prof.\ Gamma Delta}{Institute}{g.delta@university.edu}
-{Address Line 1\\Address line 2}
+\cvref{Tshepiso Williams}{Mentor at The Horizon}{tshepisowilliams@gmail.com}
+{082 909 9506}
 
 
 \end{paracol}
-
 
 \end{document}
