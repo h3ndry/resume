@@ -40,9 +40,9 @@
 %% file more 'friendly' with copy-paste etc
 %% v 1.6.1 Temporary fix for pdfx incompatibility; see https://tex.stackexchange.com/a/610445
 \RequirePackage{etoolbox}
-\@ifl@t@r\fmtversion{2021-06-01}%
- {\AddToHook{package/after/xmpincl}
-   {\patchcmd\mcs@xmpincl@patchFile{\if\par}{\ifx\par}{}{\fail}}}{}
+% \@ifl@t@r\fmtversion{2021-06-01}%
+ % {\AddToHook{package/xmpincl/after}
+   % {\patchcmd\mcs@xmpincl@patchFile{\if\par}{\ifx\par}{}{\fail}}}{}
 \RequirePackage[a-1b]{pdfx}
 %% v1.3.3 Temporary fix for pdfx and biblatex incompatibility
 %% (Thanks to @badetitou for highlighting this issue)
@@ -203,7 +203,7 @@
 \NewInfoField{email}{\faAt}[mailto:]
 \NewInfoField{mailaddress}{\faEnvelope}
 \NewInfoField{phone}{\faPhone}[tel:]
-\NewInfoField{homepage}{\faGlobe}[https://]
+\NewInfoField{homepage}{\faGlobe}[http://]
 \NewInfoField{twitter}{\faTwitter}[https://twitter.com/]
 \NewInfoField{linkedin}{\faLinkedin}[https://linkedin.com/in/]
 \NewInfoField{github}{\faGithub}[https://github.com/]
