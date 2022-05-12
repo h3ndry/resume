@@ -1,45 +1,15 @@
-%%%%%%%%%%%%%%%%%
-% This is an sample CV template created using altacv.cls
-% (v1.6, 21 May 2021) written by LianTze Lim (liantze@gmail.com). Now compiles with pdfLaTeX, XeLaTeX and LuaLaTeX.
-%
-%% It may be distributed and/or modified under the
-%% conditions of the LaTeX Project Public License, either version 1.3
-%% of this license or (at your option) any later version.
-%% The latest version of this license is in
-%%    http://www.latex-project.org/lppl.txt
-%% and version 1.3 or later is part of all distributions of LaTeX
-%% version 2003/12/01 or later.
-%%%%%%%%%%%%%%%%
-
-%% Use the "normalphoto" option if you want a normal photo instead of cropped to a circle
-% \documentclass[10pt,a4paper,normalphoto]{altacv}
-
 \documentclass[14pt,a4paper,ragged2e,withhyper]{altacv}
-%% AltaCV uses the fontawesome5 and packages.
-%% See http://texdoc.net/pkg/fontawesome5 for full list of symbols.
-
-% Change the page layout if you need to
 \geometry{left=1.25cm,right=1.25cm,top=1.2cm,bottom=1.5cm,columnsep=1cm}
-
-% The paracol package lets you typeset columns of text in parallel
 \usepackage{paracol}
-
-% Change the font if you want to, depending on whether
-% you're using pdflatex or xelatex/lualatex
 \ifxetexorluatex
-  % If using xelatex or lualatex:
   \setmainfont{Roboto Slab}
   \setsansfont{Lato}
   \renewcommand{\familydefault}{\sfdefault}
 \else
-  % If using pdflatex:
   \usepackage[rm]{roboto}
   \usepackage[defaultsans]{lato}
-  % \usepackage{sourcesanspro}
   \renewcommand{\familydefault}{\sfdefault}
 \fi
-
-% Change the colours if you want to
 \definecolor{SlateGrey}{HTML}{2E2E2E}
 \definecolor{LightGrey}{HTML}{666666}
 \definecolor{DarkPastelRed}{HTML}{450808}
@@ -53,338 +23,164 @@
 \colorlet{accent}{PastelRed}
 \colorlet{emphasis}{SlateGrey}
 \colorlet{body}{black}
-
-% Change some fonts, if necessary
 \renewcommand{\namefont}{\Huge\rmfamily\bfseries}
 \renewcommand{\personalinfofont}{\normalsize}
 \renewcommand{\cvsectionfont}{\LARGE\rmfamily\bfseries}
 \renewcommand{\cvsubsectionfont}{\LARGE\bfseries}
-
-% Change the bullets for itemize and rating marker
-% for \cvskill if you want to
 \renewcommand{\itemmarker}{{\textbullet}}
 \renewcommand{\ratingmarker}{\faCircle}
-%% Use (and optionally edit if necessary) this .tex if you
-%% want to use an author-year reference style like APA(6)
-%% for your publication list
 \input{pubs-authoryear}
-
-%% Use (and optionally edit if necessary) this .tex if you
-%% want an originally numerical reference style like IEEE
-%% for your publication list
-% \input{pubs-num}
-
-%% sample.bib contains your publications
 \addbibresource{sample.bib}
 \begin{document}
 \name{Simanga Hendry Khoza}
 \tagline{}
-%% You can add multiple photos on the left or right
-% \photoR{2.8cm}{Globe_High}
-% \photoL{2.5cm}{Yacht_High,Suitcase_High}
 
 \personalinfo{%
-  % Not all of these are required!
   \email{h3khoza@gmail.com} \hspace{.5cm}
   \homepage{www.h3ndry.me/about} \hspace{.9cm}
-  \printinfo{\faLinkedin}{linkedin.com/in/h3ndry/}[https://www.linkedin.com/in/h3ndry/] \newline
+  \printinfo{}{linkedin.com/in/h3ndry/}[https://www.linkedin.com/in/h3ndry/] \newline
   \phone{+27 81 249 0306} \hspace{.9cm}
   \location{Pretoria, Gauteng, RSA} \hspace{1cm} 
-  \printinfo{\faGithub}{github.com/h3ndry}[https://github.com/h3ndry]
-
-  % \mailaddress{Åddrésş, Street, 00000 Cóuntry}
-  % \twitter{@twitterhandle}
-  % \orcid{0000-0000-0000-0000}
-  %% You can add your own arbitrary detail with
-  %% \printinfo{symbol}{detail}[optional hyperlink prefix]
-  %% Or you can declare your own field with
-  %% \NewInfoFiled{fieldname}{symbol}[optional hyperlink prefix] and use it:
-  % \NewInfoField{gitlab}{\faGitlab}[https://gitlab.com/]
-  % \gitlab{your_id}
-  %%
-  %% For services and platforms like Mastodon where there isn't a
-  %% straightforward relation between the user ID/nickname and the hyperlink,
-  %% you can use \printinfo directly e.g.
-  % \printinfo{\faMastodon}{@username@instace}[https://instance.url/@username]
-  %% But if you absolutely want to create new dedicated info fields for
-  %% such platforms, then use \NewInfoField* with a star:
-  % \NewInfoField*{mastodon}{\faMastodon}
-  %% then you can use \mastodon, with TWO arguments where the 2nd argument is
-  %% the full hyperlink.
-  % \mastodon{@username@instance}{https://instance.url/@username}
+  \printinfo{}{github.com/h3ndry}[https://github.com/h3ndry]
 }
 
 \makecvheader
-%% Depending on your tastes, you may want to make fonts of itemize environments slightly smaller
-% \AtBeginEnvironment{itemize}{\small}
-
-%% Set the left/right column width ratio to 6:4.
 \columnratio{0.65}
-
-% Start a 2-column paracol. Both the left and right columns will automatically
-% break across pages if things get too long.
 \begin{paracol}{2}
 
 \cvsection{OBJECTIVE}
-
 \begin{quote}
-    A motivated individual with in-depth knowledge of C\# and .Net Core,
-    seeking a position in a growth-oriented company where I can use my
-    skills to the advantage of the company while having the scope to develop my
-    own skills.
-    % Creative-minded and detail-oriented individual with the ability to adhere to
-    % established procedures and thrive and learn on my own under little or no
-    % supervision. Seeking the role of a Software Engineer at <Company Name> Inc. to
-    % incorporate my expertise in software design, application development and
-    % quality assurance.
+    % For C# Job application
+    A motivated individual with in-depth knowledge of c\# and .Net Core, seeking a
+    position in a growth-oriented company where I can use my skills to the
+    advantage of the company while having the scope to develop my skills.
 \end{quote}
 
 \cvsection{Experience}
-
 \cvevent{Junior Software Developer}{Copalcor (Pty) Ltd}{March 2022 -- Present}{Gemiston}
 \begin{itemize}
-    \item Involved in initial phases of design analysis and elicitation of requirements
-    \item Involved in deploying and hosting phases of .Net Core Web Application
-    \item Delployed and Maintain .Net Core on a Linux Server
-    \item Managed MariaDB database.
-    \item Write Script do automatically backup MariaDB database 
-    \item Followed Test Driven Development to develop the Asp.Net Applicaton
-    \item Write clean, scalable code using C\# and .Net Framework
-    \item Used ADO.NET for SQL database interaction using Data Reader Dataset and Data view
-    \item Designed Developed ASP.NET User Controls and used ASP.NET Web Forms
-    \item Participated in maintenance phase of the project
-    \item Worked on GIT as a version control. Utilized NPM scripts for build and test environments in a Node.js application..
-    \item Enhanced application performace by Angular 11 Component based developemet.
-    \item Responisble for creeating efficient design and developing User interaction screens using HTML, CSS3, Bootstrap, JavaScript, Angular 11.
-
+    \item[--] Involved in initial phases of design analysis and elicitation of requirements.
+    \item[--] Involved in deploying and hosting phases of .Net Core Web Application.
+    \item[--] Deployed and maintain a .Net Core Web application on a Linux Server.
+    \item[--] Managed MariaDB database.
+    \item[--] Write a script to backup the MariaDB database daily.
+    \item[--] Followed Test Driven Development to develop the Asp.Net Application.
+    \item[--] Write clean, scalable code using c\# and .Net Framework.
+    \item[--] Responsible for creating efficient design and developing User Interaction screens using HTML, CSS3, Bootstrap, JavaScript, and React/NextJS
+    \item[--] Used ADO.NET for SQL database interaction using Data Reader Dataset and Data view.
+    \item[--] Designed and Developed ASP.NET User Controls and used ASP.NET WebForms.
+    \item[--] Participated in the maintenance phase of the project
+    \item[--] Worked on GIT as version control. Utilized NPM scripts for building and testing environments in a Node.js application.
+    \item[--] Enhanced application performance by Angular 11 Component-based development.
 \end{itemize}
-
 \divider
-
-\cvevent{.NET Developer Intern}{The Horizon HR}{March 2021 -- Febuary 2022}{Midrand}
+\cvevent{.NET Developer Intern}{The Horizon HR}{March 2021 -- February 2022}{Midrand}
 \begin{itemize}
-    \item Participated in maintenance phase of a .NET Web API project
-    \item Developed Tests for Unit testing the developed components using N Unit Testing Framework
-    \item Involved in Application Support and releasing the fixes
-    \item Provide software support to end users
-    \item Delelop Front-End Application using NextJS and React
-    \item Design and Develop an HTML form with drag and drop feature in React
-    \item Used SASS, SCSS and CSS intesinve to style Web Applications 
-    \item Addressed regular production bugs
-    \item Improved landing page and made it responsive to mobile devices.
-    \item Involved in writing application level code to interact with APIs, Web Service using AJAX, JSON and XML
+   \item[--] Participated in the maintenance phase of a .NET Web API project
+   \item[--] Developed Tests for Unit testing of the developed components using the N Unit Testing Framework
+   \item[--] Involved in Application Support and releasing the fixes
+   \item[--] Provide software support to end-users
+   \item[--] Develop Front-End Applications using NextJS and React
+   \item[--] Design and Develop an HTML form with a drag and drop feature in React.
+   \item[--] Used SASS, SCSS, and CSS intensive to style Web Applications
+   \item[--] Addressed regular production bugs.
+   \item[--] Improved landing page and made it responsive to mobile devices.
+   \item[--] Involved in writing application level code to interact with APIs, Web services using AJAX, JSON, and XML
 \end{itemize}
-
-\divider
+% \divider
 
 \switchcolumn
 
 \cvsection{SKILLS}
-
-
 \cvevent{ Programming Languages }{}{}{}
 \cvtag{C/C++} \cvtag{JavaScript} 
-\cvtag{TypeScript} \cvtag{CSS} \cvtag{MySql} \cvtag{C\#}
+    \cvtag{TypeScript} \cvtag{CSS} \cvtag{SASS} \cvtag{MySql} \cvtag{C\#}
 \cvtag{NodeJS} \cvtag{SQL} \cvtag{Bash} \cvtag{SQL} 
-% \cvtag{Lua} \cvtag{LaTex}
-
+\cvtag{Lua} \cvtag{LaTex}
+\\
 \divider\smallskip
-
 \cvevent{Patterns \& Frameworks}{}{}{}
 \cvtag{GraphQL API} \cvtag{DevOps}  \cvtag{REST API} 
 \cvtag{WordPress} \cvtag{ReactJS} \cvtag{Express}
 \cvtag{dotnet} \cvtag{Linux} \cvtag{Svelte} \cvtag{MariaDb} 
 \cvtag{NextJS} \cvtag{.Net Core} \cvtag{ASPnet} \cvtag{SQL} 
- \cvtag{Agile} \cvtag{MS Entity Frameworks} \cvtag{Agile} \cvtag{git}
+\cvtag{Agile} \cvtag{MS Entity Frameworks} \cvtag{Agile} \cvtag{git}
+\smallskip
+\\
+\divider
+\cvevent{ SoftSkills }{}{}{}
+\begin{description}[style=multiline,leftmargin=.2em,align=left]
 
-\divider\smallskip
+   \item[\small\normalfont] Communication
+   \item[\small\normalfont] Problem-solving
+   \item[\small\normalfont] Creative intelligence
+   \item[\small\normalfont] Emotional intelligence
+   \item[\small\normalfont] Collaboration and teamwork
+   \item[\small\normalfont] Owning up to errors and teamwork
+   \item[\small\normalfont] Time management and organization
 
-\cvevent{ Soft Skills }{}{}{}
-\cvtag{C/C++} \cvtag{JavaScript} 
-\cvtag{TypeScript} \cvtag{CSS} \cvtag{MySql} \cvtag{C\#}
-\cvtag{NodeJS} \cvtag{SQL} \cvtag{Bash} \cvtag{SQL} 
-% \cvtag{Lua} \cvtag{LaTex}
+\end{description}
 
 \divider\smallskip
 
 \cvsection{CERTIFICATIONS}
-
-\cvachievement{\faTrophy}{Microsoft Certified: Azure DevOps Engineer Expert}{issued: \hspace{0em} 8 October 2021 \hspace{1cm} \href{https://www.credly.com/badges/80f2454f-f8de-4e74-9575-a01edf459fde}{https://cutt.ly/DRI8NYP} }
-
+\cvachievement{Azure DevOps Engineer Expert}{issued: 8 October 2021}{\href{https://www.credly.com/badges/80f2454f-f8de-4e74-9575-a01edf459fde}{https://cutt.ly/DRI8NYP} }
 \divider
-
-\cvachievement{\faTrophy}{Microsoft Certified: Azure Developer Associate}{issued: \hspace{0.0em} 8 July 2021 \hspace{1cm} \href{https://www.credly.com/badges/2b9449fa-ea3c-4baa-9362-2b1c6f69636e}{https://cutt.ly/tRI4WYo} }
-
+\cvachievement{Azure Developer Associate}{issued: 8 July 2021}{\href{https://www.credly.com/badges/2b9449fa-ea3c-4baa-9362-2b1c6f69636e}{https://cutt.ly/tRI4WYo} }
 \divider
+\cvachievement{Azure Fundamentals}{issued: 26 April 2021}{ \href{https://www.credly.com/badges/eb7f2969-df90-4138-b898-bcb9f57389e1}{https://cutt.ly/sRI3GgJ} }
 
-\cvachievement{\faTrophy}{Microsoft Certified: Azure Fundamentals}{issued: \hspace{0em} 26 April 2021 \hspace{1cm} \href{https://www.credly.com/badges/eb7f2969-df90-4138-b898-bcb9f57389e1}{https://cutt.ly/sRI3GgJ} }
-
-
-% \cvevent{IT Support \& System Administrator Skills}{}{}{}
-% \begin{itemize}
-% % \item Windows Server
-% % \item Microsoft office
-% \item Firewall (Mimecast, Kerio, Mcafee)
-% \item Printers configuration and troubleshooting
-% \item Diagnosing and troubleshooting software and hardware issues
-% \item Repairing and replacing damaged computer and network components
-% \item Installing, configuring and maintaining software and hardware components of computer and network systems
-% \end{itemize}
-
-% \cvtag{GraphQL} \cvtag{DevOps} \cvtag{Agile} \cvtag{REST} \\
-% \cvtag{API}
-
-%
-% \cvsection{Most Proud of}
-%
-% \cvachievement{\faTrophy}{Fantastic Achievement}{and some details about it}
-%
-%
-% \cvachievement{\faHeartbeat}{Another achievement}{more details about it of course}
-%
-% \divider
-%
-% \cvachievement{\faHeartbeat}{Another achievement}{more details about it of course}
-%
-% \cvsection{Strengths}
-%
-% \cvtag{Hard-working}
-% \cvtag{Eye for detail}\\
-% \cvtag{Motivator \& Leader}
-%
-% \divider\smallskip
-%
-% \cvtag{C++}
-% \cvtag{Embedded Systems}\\
-% \cvtag{Statistical Analysis}
-%
-% \cvsection{Languages}
-%
-% \cvskill{English}{5}
-% \divider
-%
-% \cvskill{Spanish}{4}
-% \divider
-%
-% \cvskill{German}{3.5} %% Supports X.5 values.
-%
-%% Yeah I didn't spend too much time making all the
-%% spacing consistent... sorry. Use \smallskip, \medskip,
-%% \bigskip, \vspace etc to make adjustments.
 \medskip
 
-% \divider
-
-
 \end{paracol}
+
 \begin{paracol}{2}
 
 
 \cvevent{C++ Programming Tutor }{Tshwane University of Technology}{Febuary 2020 -- Dec 2020}{Pretoria}
 \begin{itemize}
-    \item Assisting students to undestand the fundamentals of C++ and Object-oriented in the context of C++
-    \item Help students with to work with C++ pointer and Memory Management in C++
-    \item Encouraging personal development via tutorials
-    \item Assisting students with homework, projects, test preparation, papers, research and other academic tasks
-    \item Conducting practice tests to track progress, identify areas of improvement and help set goals for exam preparation
+   \item[--] Assisting students to understand the fundamentals of C++ and OOP in the context of C++
+   \item[--] Help students to work with C pointers and Memory Management in C
+   \item[--] Encouraging personal development via tutorials
+   \item[--] Assisting students with homework, projects, test preparation, papers, research, and other academic tasks
+   \item[--] Conducting practice tests to track progress, identify areas of improvement and help set goals for exam preparation
 \end{itemize}
-
-
-
 
 \cvsection{Education}
-
 \cvevent{N.Dip Computer Systems Engineering}{Tshwane University of Technology}{2018 -- 2020}{}
 \begin{itemize}
-    \item Achieve four distinctions in Object-oriented Programming and Computer Skills. \newline
-    \item Modules: Communication Skills, Computer Skills, Digital Systems, Electrical Engineering, Electronics, Mathematics, Programming, Network Systems, Project, Digital Process Control, Operating Systems, Systems Analysis, Database Principles, Logic Design, Operational Research, Software Engineering
+   \item[--] Achieve four distinctions in Object-oriented Programming and Computer Skills.
+   \item[--] Modules: Communication Skills, Computer Skills, Digital Systems, Electrical Engineering, Electronics, Mathematics, Programming, Network Systems, Project, Digital Process Control, Operating Systems, Systems Analysis, Database Principles, Logic Design, Operational Research, Software Engineering
 \end{itemize}
-
 \divider
-
 \cvevent{High School Diploma}{Sincobile Secondary School}{2009 --- 2013}{}
-
 \begin{itemize}
-    \item Achieve a distinction in Mathematics and level 6 and 5 in rest of the subjects  %Physical Sciences, Geography, Life Sciences, Agricultural Sciences, English First Additional Language, SiSwati Home Language, Life Orientation
-    \item Subjects: SiSwati Home Language, English First Additional Language, Mathematics, Life Orientation, Agricultural Science, Geography, Life Sciences, Physical Sciences
+   \item[--] Achieve a distinction in Mathematics and levels 6 and 5 in the rest of the subjects
+   \item[--] Subjects: SiSwati Home Language, English First Additional Language, Mathematics, Life Orientation, Agricultural Science, Geography, Life Sciences, Physical Sciences
 \end{itemize}
 
 \cvsection{Project}
+\cvproj{Metal Purchasing System}{
+A Full-Stack Web application built with .Net Core 5, The application simplifies the process of managing orders through a spreadsheet. It allows the user to create an order and send an email to the supplier. The application  is running on a Debian server using apache web sever 
+}{\href{https://magibela.netlify.app/}{45.79.173.203}}
 
-\cvproj{Metal Purchasing System}{Plays preview of the top songs from Spotify using REST API}{\href{https://magibela.netlify.app/}{magibela.netlify.app/}}
+\cvproj{Music Web Application}{
+Music Web Application built with Javascript, HTML, and CSS that calls the Spotify REST API to play a top song of an artist
+}{\href{https://magibela.netlify.app/}{magibela.netlify.app/} }
 
-\divider
-
-\cvproj{Holidays-ZA}{A REST Web API, that returns information about South African holidays.}{\href{https://holidays-za.netlify.app/api}{https://holidays-za.netlify.app/api}}
-
-\divider
-
-\cvproj{Music web app}{Plays preview of the top songs from Spotify using REST API}{\href{https://magibela.netlify.app/}{magibela.netlify.app/}}
-
-\divider
-
-\cvproj{Music web app}{Plays preview of the top songs from Spotify using REST API}{\href{https://magibela.netlify.app/}{magibela.netlify.app/}}
-
-
+\cvproj{Online Cellphone Store}{
+React Single Page Application. A Demo Online Website that sells Cellphones. I have used Context Management to manage the state of the application
+}{\href{https://cell-phone-store.netlify.app/}{https://cell-phone-store.netlify.app/} }
 
 \switchcolumn
 
-
-
 \cvsection{Referees}
-
 \cvref{Mpho Phahlamohlaka}{Colleague at University}{mphophahhh@gmail.com}
 {064 891 7189}
-
 \divider
-
 \cvref{Tshepiso Williams}{Mentor at The Horizon}{tshepisowilliams@gmail.com}
 {082 909 9506}
-
 \newpage
-
-
-
-% \medskip
-
-% \cvsection{A Day of My Life}
-%
-% % Adapted from @Jake's answer from http://tex.stackexchange.com/a/82729/226
-% % \wheelchart{outer radius}{inner radius}{
-% % comma-separated list of value/text width/color/detail}
-% \wheelchart{1.5cm}{0.5cm}{%
-%   6/8em/accent!30/{Sleep,\\beautiful sleep},
-%   3/8em/accent!40/Hopeful novelist by night,
-%   8/8em/accent!60/Daytime job,
-%   2/10em/accent/Sports and relaxation,
-%   5/6em/accent!20/Spending time with family
-% }
-
-% \begin{itemize}[font=\color{accent},widest=\faCode]
-% \color{emphasis}
-% \item[\faPlaneDeparture] Travelling
-% \item[\faCode] Coding for leisure
-% \end{itemize}
-
-% use ONLY \newpage if you want to force a page break for
-% ONLY the current column
-
-% \cvsection{Publications}
-%
-% \nocite{*}
-%
-% \printbibliography[heading=pubtype,title={\printinfo{\faBook}{Books}},type=book]
-%
-% \divider
-%
-% \printbibliography[heading=pubtype,title={\printinfo{\faFile*[regular]}{Journal Articles}},type=article]
-%
-% \divider
-%
-% \printbibliography[heading=pubtype,title={\printinfo{\faUsers}{Conference Proceedings}},type=inproceedings]
-
-%% Switch to the right column. This will now automatically move to the second
-%% page if the content is too long.
 
 \end{paracol}
 

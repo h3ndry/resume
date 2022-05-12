@@ -200,16 +200,16 @@
 \newcommand{\name}[1]{\def\@name{#1}}
 \newcommand{\tagline}[1]{\def\@tagline{#1}}
 \newcommand{\personalinfo}[1]{\def\@personalinfo{#1}}
-\NewInfoField{email}{\faAt}[mailto:]
+\NewInfoField{email}{}[mailto:]
 \NewInfoField{mailaddress}{\faEnvelope}
-\NewInfoField{phone}{\faPhone}[tel:]
-\NewInfoField{homepage}{\faGlobe}[http://]
+\NewInfoField{phone}{}[tel:]
+\NewInfoField{homepage}{}[http://]
 \NewInfoField{twitter}{\faTwitter}[https://twitter.com/]
-\NewInfoField{linkedin}{\faLinkedin}[https://linkedin.com/in/]
-\NewInfoField{github}{\faGithub}[https://github.com/]
+\NewInfoField{linkedin}{}[https://linkedin.com/in/]
+\NewInfoField{github}{}[https://github.com/]
 % v1.?? Use fontawesome5 for Orcid symbol
 \NewInfoField{orcid}{\faOrcid}[https://orcid.org/]
-\NewInfoField{location}{\faMapMarker}
+\NewInfoField{location}{}
 
 % v1.2: Support for multiple photos
 \newlength{\altacv@photos@width}
@@ -273,7 +273,7 @@
   \endgroup\medskip
 }
 
-\renewenvironment{quote}{\color{accent}\itshape\large}{\par}
+\renewenvironment{quote}{\color{emphasis}\itshape\large}{\par}
 
 \newcommand{\cvsection}[2][]{%
   \nointerlineskip\bigskip%  %% bugfix in v1.6.2
@@ -290,12 +290,12 @@
 % v1.1.4: fixes inconsistent font size
 \newcommand{\cvevent}[4]{%
   {\large\color{emphasis}#1\par}
-  \smallskip\normalsize
+  \smallskip
   \ifstrequal{#2}{}{}{
-  \textbf{\color{accent}#2}\par
+  \textbf{\color{heading}#2}\par
   \smallskip}
-  \ifstrequal{#3}{}{}{{\small\makebox[0.5\linewidth][l]{\faCalendar~#3}}}%
-  \ifstrequal{#4}{}{}{{\small\makebox[0.5\linewidth][l]{\faMapMarker~#4}}}\par
+  \ifstrequal{#3}{}{}{{\makebox[0.5\linewidth][l]{\textbf~#3}}}%
+  \ifstrequal{#4}{}{}{{\makebox[0.5\linewidth][l]{\textbf~#4}}}\par
   \medskip\normalsize
 }
 
@@ -312,11 +312,13 @@
 }
 
 \newcommand{\cvachievement}[3]{%
-  \begin{tabularx}{\linewidth}{@{}p{2em} @{\hspace{1ex}} >{\raggedright\arraybackslash}X@{}}
-  \multirow{2}{*}{\Large\color{accent}#1} & \bfseries\textcolor{emphasis}{#2}\\
-  & #3
-  \end{tabularx}%
-  \smallskip
+   \par {#1} \par
+    {#2} \par
+    {#3} \par 
+  % \multirow{2}{*}{\Large\color{accent}#1} & \bfseries\textcolor{emphasis}{#2}\\
+  % & #3
+  % \end{tabularx}%
+  % \smallskip
 }
 
 \newcommand{\cvtag}[1]{%
@@ -395,10 +397,10 @@
 \newcommand{\cvref}[4]{%
   \smallskip
   \textcolor{emphasis}{\textbf{#1}}\par
-  \begin{description}[style=multiline,leftmargin=1.35em,align=left]
-  \item[\small\normalfont\emailsymbol] #2
-  \item[\small\normalfont\mailaddresssymbol] #3
-  \item[\small\normalfont\faPhone] #4
+  \begin{description}[style=multiline,leftmargin=.2em,align=left]
+  \item[\small\normalfont] #2
+  \item[\small\normalfont] #3
+  \item[\small\normalfont] #4
   \end{description}
 %   \medskip
 }
