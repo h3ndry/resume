@@ -1,15 +1,18 @@
 \documentclass[14pt,a4paper,ragged2e,withhyper]{altacv}
 \geometry{left=1.25cm,right=1.25cm,top=1.2cm,bottom=1.5cm,columnsep=1cm}
 \usepackage{paracol}
-\ifxetexorluatex
-  \setmainfont{Roboto Slab}
-  \setsansfont{Lato}
-  \renewcommand{\familydefault}{\sfdefault}
-\else
-  \usepackage[rm]{roboto}
-  \usepackage[defaultsans]{lato}
-  \renewcommand{\familydefault}{\sfdefault}
-\fi
+\usepackage{libertine}
+
+% \ifxetexorluatex
+%   \setmainfont{Roboto Slab}
+%   \setsansfont{Lato}
+%   \renewcommand{\familydefault}{\sfdefault}
+% \else
+%   \usepackage[rm]{roboto}
+%   \usepackage[defaultsans]{lato}
+%   \renewcommand{\familydefault}{\sfdefault}
+% \fi
+
 \definecolor{SlateGrey}{HTML}{2E2E2E}
 \definecolor{LightGrey}{HTML}{666666}
 \definecolor{DarkPastelRed}{HTML}{450808}
@@ -40,18 +43,22 @@
   \homepage{www.h3ndry.me/about} \hspace{.9cm}
   \printinfo{}{linkedin.com/in/h3ndry/}[https://www.linkedin.com/in/h3ndry/] \newline
   \phone{+27 81 249 0306} \hspace{.9cm}
-  \location{Pretoria, Gauteng, RSA} \hspace{1cm} 
+  \location{Pretoria, Gauteng, RSA} \hspace{1cm}
   \printinfo{}{github.com/h3ndry}[https://github.com/h3ndry]
 }
 
 \makecvheader
+
+
 \columnratio{0.65}
 \begin{paracol}{2}
 
+
+Hello world... What font are
+
 \cvsection{OBJECTIVE}
 \begin{quote}
-    % For C# Job application
-    A motivated individual with in-depth knowledge of c\# and .Net Core, seeking a
+    A motivated individual with in-depth knowledge of C\# and .Net Core, seeking a
     position in a growth-oriented company where I can use my skills to the
     advantage of the company while having the scope to develop my skills.
 \end{quote}
@@ -65,8 +72,9 @@
     \item[--] Managed MariaDB database.
     \item[--] Write a script to backup the MariaDB database daily.
     \item[--] Followed Test Driven Development to develop the Asp.Net Application.
-    \item[--] Write clean, scalable code using c\# and .Net Framework.
+    \item[--] Write clean, scalable code using C\# and .Net Framework.
     \item[--] Responsible for creating efficient design and developing User Interaction screens using HTML, CSS3, Bootstrap, JavaScript, and React/NextJS
+    % \item[--] Responsible for creating efficient design and developing User Interaction screens using HTML, CSS3, Bootstrap, JavaScript, and Angular
     \item[--] Used ADO.NET for SQL database interaction using Data Reader Dataset and Data view.
     \item[--] Designed and Developed ASP.NET User Controls and used ASP.NET WebForms.
     \item[--] Participated in the maintenance phase of the project
@@ -81,7 +89,9 @@
    \item[--] Involved in Application Support and releasing the fixes
    \item[--] Provide software support to end-users
    \item[--] Develop Front-End Applications using NextJS and React
+   % \item[--] Develop Front-End Applications using Angular and TypeScript
    \item[--] Design and Develop an HTML form with a drag and drop feature in React.
+   % \item[--] Design and Develop an HTML form with a drag and drop feature in Angular.
    \item[--] Used SASS, SCSS, and CSS intensive to style Web Applications
    \item[--] Addressed regular production bugs.
    \item[--] Improved landing page and made it responsive to mobile devices.
@@ -93,22 +103,32 @@
 
 \cvsection{SKILLS}
 \cvevent{ Programming Languages }{}{}{}
-\cvtag{C/C++} \cvtag{JavaScript} 
-    \cvtag{TypeScript} \cvtag{CSS} \cvtag{SASS} \cvtag{MySql} \cvtag{C\#}
-\cvtag{NodeJS} \cvtag{SQL} \cvtag{Bash} \cvtag{SQL} 
+\cvtag{C/C++}
+% \cvtag{Java}
+\cvtag{JavaScript}
+\cvtag{TypeScript} \cvtag{CSS} \cvtag{SASS} \cvtag{MySql} \cvtag{C\#}
+\cvtag{NodeJS} \cvtag{SQL} \cvtag{Bash} \cvtag{SQL}
 \cvtag{Lua} \cvtag{LaTex}
 \\
 \divider\smallskip
 \cvevent{Patterns \& Frameworks}{}{}{}
-\cvtag{GraphQL API} \cvtag{DevOps}  \cvtag{REST API} 
-\cvtag{WordPress} \cvtag{ReactJS} \cvtag{Express}
-\cvtag{dotnet} \cvtag{Linux} \cvtag{Svelte} \cvtag{MariaDb} 
-\cvtag{NextJS} \cvtag{.Net Core} \cvtag{ASPnet} \cvtag{SQL} 
-\cvtag{Agile} \cvtag{MS Entity Frameworks} \cvtag{Agile} \cvtag{git}
+\cvtag{GraphQL API} \cvtag{DevOps}  \cvtag{REST API}
+\cvtag{AngularJS}
+\cvtag{ReactJS}
+\cvtag{Express}
+% \cvtag{Spring Boot}
+\cvtag{dotnet} \cvtag{Linux} \cvtag{Svelte} \cvtag{MariaDb}
+\cvtag{NextJS}
+\cvtag{.Net Core}
+% \cvtag{Java EE}
+% \cvtag{Java Beans}
+\cvtag{ASPnet} \cvtag{SQL}
+\cvtag{Agile} \cvtag{Agile}
+\cvtag{MS Entity Frameworks}  \cvtag{git}
 \smallskip
 \\
 \divider
-\cvevent{ SoftSkills }{}{}{}
+\cvevent{ Soft Skills }{}{}{}
 \begin{description}[style=multiline,leftmargin=.2em,align=left]
 
    \item[\small\normalfont] Communication
@@ -138,9 +158,12 @@
 
 
 \cvevent{C++ Programming Tutor }{Tshwane University of Technology}{Febuary 2020 -- Dec 2020}{Pretoria}
+% \cvevent{Java Programming Tutor }{Tshwane University of Technology}{Febuary 2020 -- Dec 2020}{Pretoria}
 \begin{itemize}
-   \item[--] Assisting students to understand the fundamentals of C++ and OOP in the context of C++
+   \item[--] Assisting students in understand the fundamentals of C++ and OOP in the context of C++
    \item[--] Help students to work with C pointers and Memory Management in C
+   % \item[--] Assisting students in understand the fundamentals of Java and OOP in the context of Java
+   % \item[--] Help students to work with pointers pointers and Memory Management in pointers
    \item[--] Encouraging personal development via tutorials
    \item[--] Assisting students with homework, projects, test preparation, papers, research, and other academic tasks
    \item[--] Conducting practice tests to track progress, identify areas of improvement and help set goals for exam preparation
@@ -161,7 +184,7 @@
 
 \cvsection{Project}
 \cvproj{Metal Purchasing System}{
-A Full-Stack Web application built with .Net Core 5, The application simplifies the process of managing orders through a spreadsheet. It allows the user to create an order and send an email to the supplier. The application  is running on a Debian server using apache web sever 
+A Full-Stack Web application built with .Net Core 5, The application simplifies the process of managing orders through a spreadsheet. It allows the user to create an order and send an email to the supplier. The application  is running on a Debian server using apache web sever
 }{\href{https://magibela.netlify.app/}{45.79.173.203}}
 
 \cvproj{Music Web Application}{
