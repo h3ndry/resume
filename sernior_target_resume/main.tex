@@ -1,11 +1,21 @@
 \documentclass{resume}
-\geometry{left=1cm,right=0.25cm,top=1.2cm,bottom=1.5cm,columnsep=1cm}
+\geometry{left=0.8cm,right=0.8cm,top=1cm,bottom=1cm,columnsep=1cm}
 \usepackage{paracol}
 \usepackage{setspace}
 \usepackage{lipsum}
 \usepackage{enumitem}
 
 \renewcommand{\baselinestretch}{0.8}
+
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,
+    urlcolor=cyan,
+    pdftitle={Overleaf Example},
+    pdfpagemode=FullScreen,
+    }
 
 
 \begin{document}
@@ -14,6 +24,7 @@
 
 \begin{huge}\noindent Simanga Hendry Khoza \end{huge}
 \begin{paracol}{3}
+\setlength{\parskip}{6pt}
         \noindent
         \clink{\href{mailto:h3khoza@gmail.com}{h3khoza@gmail.com}} \newline
         \clink{+27 81 249 0306}
@@ -27,14 +38,24 @@
         \clink{ \href{github.com/h3ndry}{github.com/h3ndry}}
 \end{paracol}
 
-\columnratio{0.65}
-\begin{paracol}{2}
-    \csection{Objective}{\small
+
+% \columnratio{0.70}
+% \begin{paracol}{2}
+
+    \csection{Skills}{\small
+    \setlength{\parskip}{6pt}
         \noindent
-        \clink{\\A motivated individual with in-depth knowledge of C\# \\ and .Net Core, seeking a
-    position in a growth-oriented \\ company where I can use my skills to the
-    advantage of \\ the company while having the scope to develop my skills.}
-        } \newline
+        \clink {C\# | .NET | Java | JavaScript | TypeScript | C++ | C | CosmosDB | MSSQL | Node | Express | React | Vue | Redux | jQuery | NoSQL | Git} \newline \newline
+        \clink {zure | Cloud Computing | CI/CD | XUnit | Jest | Cucumber | Nightswatch | Unit Testing | Lambda | OOP | Unity 2D | Game Development} \newline \newline
+        \clink{  Microservices | Distributed Systems | Frontend | Backend | Full-Stack | English, Korean, Japanese – All professional proficiency or above} \newline
+
+    %     \clink{\\A motivated individual with in-depth knowledge of C\# \\ and .Net Core, seeking a
+    % position in a growth-oriented \\ company where I can use my skills to the
+    % advantage of \\ the company while having the scope to develop my skills.}
+
+        }
+
+
 
     \csection{Experience}{\small
         \begin{itemize}
@@ -81,7 +102,9 @@
             \item \frcontent{ACM Fellow}{Association for Computing Machinery}{}{2009}
         \end{itemize}
     }
-\switchcolumn
+
+% \switchcolumn
+
     \csection{Skills}{\small
         \begin{itemize}
             \item \textbf{Technologies} \newline
@@ -124,5 +147,5 @@
         \end{tabularx}
     }
 
-\end{paracol}
+% \end{paracol}
 \end{document}
