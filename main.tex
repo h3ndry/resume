@@ -1,7 +1,12 @@
-\documentclass[14pt,a4paper,ragged2e,withhyper]{altacv}
-\kgeometry{left=1.25cm,right=1.25cm,top=1.2cm,bottom=1.5cm,columnsep=1cm}
+\documentclass{resume}
+\geometry{left=0.8cm,right=0.8cm,top=1cm,bottom=1cm,columnsep=1cm}
 \usepackage{paracol}
-\usepackage{libertine}
+\usepackage{setspace}
+\usepackage{lipsum}
+\usepackage{enumitem}
+
+\renewcommand{\baselinestretch}{0.8}
+
 \usepackage{hyperref}
 \hypersetup{
     colorlinks=true,
@@ -12,212 +17,159 @@
     pdfpagemode=FullScreen,
     }
 
-% \ifxetexorluatex
-%   \setmainfont{Roboto Slab}
-%   \setsansfont{Lato}
-%   \renewcommand{\familydefault}{\sfdefault}
-% \else
-%   \usepackage[rm]{roboto}
-%   \usepackage[defaultsans]{lato}
-%   \renewcommand{\familydefault}{\sfdefault}
-% \fi
 
-\definecolor{SlateGrey}{HTML}{2E2E2E}
-\definecolor{LightGrey}{HTML}{666666}
-\definecolor{DarkPastelRed}{HTML}{450808}
-\definecolor{PastelRed}{HTML}{8F0D0D}
-\definecolor{GoldenEarth}{HTML}{E7D192}
-\colorlet{name}{black}
-\colorlet{tagline}{PastelRed}
-\colorlet{heading}{DarkPastelRed}
-\colorlet{headingrule}{GoldenEarth}
-\colorlet{subheading}{PastelRed}
-\colorlet{accent}{PastelRed}
-\colorlet{emphasis}{SlateGrey}
-\colorlet{body}{black}
-\renewcommand{\namefont}{\Huge\rmfamily\bfseries}
-\renewcommand{\personalinfofont}{\normalsize}
-\renewcommand{\cvsectionfont}{\LARGE\rmfamily\bfseries}
-\renewcommand{\cvsubsectionfont}{\LARGE\bfseries}
-\renewcommand{\itemmarker}{{\textbullet}}
-\renewcommand{\ratingmarker}{\faCircle}
-\input{pubs-authoryear}
-\addbibresource{sample.bib}
 \begin{document}
-\name{Simanga Hendry Khoza}
-\tagline{}
 
-\personalinfo{%
-  \email{h3khoza@gmail.com} \hspace{.5cm}
-  \homepage{www.h3ndry.me/about} \hspace{.9cm}
-  \printinfo{}{linkedin.com/in/h3ndry/}[https://www.linkedin.com/in/h3ndry/] \newline
-  \phone{+27 81 249 0306} \hspace{.9cm}
-  \location{Pretoria, Gauteng, RSA} \hspace{1cm}
-  \printinfo{}{github.com/h3ndry}[https://github.com/h3ndry]
-}
+\fontfamily{ppl}\selectfont
 
-\makecvheader
-
-
-\columnratio{0.65}
-\begin{paracol}{2}
-
-
-Hello world... What font are
-
-\cvsection{OBJECTIVE}
-\begin{quote}
-    A motivated individual with in-depth knowledge of C\# and .Net Core, seeking a
-    position in a growth-oriented company where I can use my skills to the
-    advantage of the company while having the scope to develop my skills.
-\end{quote}
-
-\cvsection{Experience}
-\cvevent{Junior Software Developer}{Copalcor (Pty) Ltd}{March 2022 -- Present}{Gemiston}
-\begin{itemize}
-    \item[--] Involved in initial phases of design analysis and elicitation of requirements.
-    \item[--] Involved in deploying and hosting phases of .Net Core Web Application.
-    \item[--] Deployed and maintain a .Net Core Web application on a Linux Server.
-    \item[--] Managed MariaDB database.
-    \item[--] Write a script to backup the MariaDB database daily.
-    \item[--] Followed Test Driven Development to develop the Asp.Net Application.
-    \item[--] Write clean, scalable code using C\# and .Net Framework.
-    \item[--] Responsible for creating efficient design and developing User Interaction screens using HTML, CSS3, Bootstrap, JavaScript, and React/NextJS
-    % \item[--] Responsible for creating efficient design and developing User Interaction screens using HTML, CSS3, Bootstrap, JavaScript, and Angular
-    \item[--] Used ADO.NET for SQL database interaction using Data Reader Dataset and Data view.
-    \item[--] Designed and Developed ASP.NET User Controls and used ASP.NET WebForms.
-    \item[--] Participated in the maintenance phase of the project
-    \item[--] Worked on GIT as version control. Utilized NPM scripts for building and testing environments in a Node.js application.
-    \item[--] Enhanced application performance by Angular 11 Component-based development.
-\end{itemize}
-\divider
-\cvevent{.NET Developer Intern}{The Horizon HR}{March 2021 -- February 2022}{Midrand}
-\begin{itemize}
-   \item[--] Participated in the maintenance phase of a .NET Web API project
-   \item[--] Developed Tests for Unit testing of the developed components using the N Unit Testing Framework
-   \item[--] Involved in Application Support and releasing the fixes
-   \item[--] Provide software support to end-users
-   \item[--] Develop Front-End Applications using NextJS and React
-   % \item[--] Develop Front-End Applications using Angular and TypeScript
-   \item[--] Design and Develop an HTML form with a drag and drop feature in React.
-   % \item[--] Design and Develop an HTML form with a drag and drop feature in Angular.
-   \item[--] Used SASS, SCSS, and CSS intensive to style Web Applications
-   \item[--] Addressed regular production bugs.
-   \item[--] Improved landing page and made it responsive to mobile devices.
-   \item[--] Involved in writing application level code to interact with APIs, Web services using AJAX, JSON, and XML
-\end{itemize}
-% \divider
-
+\begin{huge}\noindent Simanga Hendry Khoza \end{huge}
+\begin{paracol}{3}
+        \noindent
+        \clink{\href{mailto:h3khoza@gmail.com}{h3khoza@gmail.com}} \newline
+        \clink{+27 81 249 0306}
 \switchcolumn
-
-\cvsection{SKILLS}
-\cvevent{ Programming Languages }{}{}{}
-\cvtag{C/C++}
-% \cvtag{Java}
-\cvtag{JavaScript}
-\cvtag{TypeScript} \cvtag{CSS} \cvtag{SASS} \cvtag{MySql} \cvtag{C\#}
-\cvtag{NodeJS} \cvtag{SQL} \cvtag{Bash} \cvtag{SQL}
-\cvtag{Lua} \cvtag{LaTex}
-\\
-\divider\smallskip
-\cvevent{Patterns \& Frameworks}{}{}{}
-\cvtag{GraphQL API} \cvtag{DevOps}  \cvtag{REST API}
-\cvtag{AngularJS}
-\cvtag{ReactJS}
-\cvtag{Express}
-% \cvtag{Spring Boot}
-% \cvtag{Spring Boot}
-% \cvtag{Spring Boot}
-% \cvtag{Spring Boot}
-% \cvtag{Spring Boot}
-\cvtag{dotnet} \cvtag{Linux} \cvtag{Svelte} \cvtag{MariaDb}
-\cvtag{NextJS}
-\cvtag{.Net Core}
-% \cvtag{Java EE}
-% \cvtag{Java Beans}
-\cvtag{ASPnet} \cvtag{SQL}
-\cvtag{Agile} \cvtag{Agile}
-\cvtag{MS Entity Frameworks}  \cvtag{git}
-\smallskip
-\\
-\divider
-\cvevent{ Soft Skills }{}{}{}
-\begin{description}[style=multiline,leftmargin=.2em,align=left]
-
-   \item[\small\normalfont] Communication
-   \item[\small\normalfont] Problem-solving
-   \item[\small\normalfont] Creative intelligence
-   \item[\small\normalfont] Emotional intelligence
-   \item[\small\normalfont] Collaboration and teamwork
-   \item[\small\normalfont] Owning up to errors and teamwork
-   \item[\small\normalfont] Time management and organization
-
-\end{description}
-
-\divider\smallskip
-
-\cvsection{CERTIFICATIONS}
-\cvachievement{Azure DevOps Engineer Expert}{issued: 8 October 2021}{\href{https://www.credly.com/badges/80f2454f-f8de-4e74-9575-a01edf459fde}{https://cutt.ly/DRI8NYP} }
-\divider
-\cvachievement{Azure Developer Associate}{issued: 8 July 2021}{\href{https://www.credly.com/badges/2b9449fa-ea3c-4baa-9362-2b1c6f69636e}{https://cutt.ly/tRI4WYo} }
-\divider
-\cvachievement{Azure Fundamentals}{issued: 26 April 2021}{ \href{https://www.credly.com/badges/eb7f2969-df90-4138-b898-bcb9f57389e1}{https://cutt.ly/sRI3GgJ} }
-
-\medskip
-
+\noindent
+        \clink{ \href{www.h3ndry.me/about}{www.h3ndry.me/about}}\newline
+        \clink{Pretoria, Gauteng, RSA}\newline
+\switchcolumn
+\noindent
+        \clink{ \href{www.linkedin.com/in/h3ndry/}{linkedin.com/in/h3ndry}} \newline
+        \clink{ \href{www.github.com/h3ndry}{github.com/h3ndry}}
 \end{paracol}
 
-\begin{paracol}{2}
+    \csection{Skills}{\small
+    \setlength{\parskip}{6pt}
+        \noindent
+        \clink {C\# | .NET | JavaScript | TypeScript | C++ | C | Bash  | Node | Python | SQL | NoSQL | Git } \newline \newline
+        \clink {Linux | Gitlab | DevOps | CI/CD | Neovim | Jest | GitHub | Unit Testing | FastAPI | Docker } \newline
+        \clink{  Microservices | Kubernetes | Frontend | Backend | Full-Stack | Tilt | BigQuery | Firebase } \newline
+        }
+
+    \csection{Experience}{\small
+        \begin{itemize}
+            \item \frcontent{Full-Stack Software Developer}{Kriterion - Pretoria, Melonpark}{July 2022 -- Present}
+                \begin{itemize}[topsep=0pt,itemsep=0pt]
+                {
+                    \item Involved in initial phases of design analysis and elicitation of requirements.
+                    \item Involved in deploying and hosting phases of .Net Core Web Application.
+                    \item Deployed and maintain a .Net Core Web application on a Linux Server.
+                    \item Managed MariaDB database.
+                    \item Write a script to backup the MariaDB database daily.
+                    \item Followed Test Driven Development to develop the Asp.Net Application.
+                    \item Write clean, scalable code using C\# and .Net Framework.
+                    \item Responsible for creating efficient design and developing User Interaction screens using HTML, CSS3, Bootstrap, JavaScript, and React/NextJS
+                    \item Responsible for creating efficient design and developing User Interaction screens using HTML, CSS3, Bootstrap, JavaScript, and Angular
+                    \item Used ADO.NET for SQL database interaction using Data Reader Dataset and Data view.
+
+                    % \item Designed and Developed ASP.NET User Controls and used ASP.NET WebForms.
+                    % \item Participated in the maintenance phase of the project
+                    % \item Worked on GIT as version control. Utilized NPM scripts for building and testing environments in a Node.js application.
+                    % \item Enhanced application performance by Angular 11 Component-based development.
+
+                }
+                \end{itemize}
 
 
-\cvevent{C++ Programming Tutor }{Tshwane University of Technology}{Febuary 2020 -- Dec 2020}{Pretoria}
-% \cvevent{Java Programming Tutor }{Tshwane University of Technology}{Febuary 2020 -- Dec 2020}{Pretoria}
-\begin{itemize}
-   \item[--] Assisting students in understand the fundamentals of C++ and OOP in the context of C++
-   \item[--] Help students to work with C pointers and Memory Management in C
-   % \item[--] Assisting students in understand the fundamentals of Java and OOP in the context of Java
-   % \item[--] Help students to work with pointers pointers and Memory Management in pointers
-   \item[--] Encouraging personal development via tutorials
-   \item[--] Assisting students with homework, projects, test preparation, papers, research, and other academic tasks
-   \item[--] Conducting practice tests to track progress, identify areas of improvement and help set goals for exam preparation
-\end{itemize}
+            \item \frcontent{Junior Software Developer}{Copalcor (Pty) Ltd - Gemiston, Wideville}{January 2022 -- June 2022}
+                \begin{itemize}[topsep=0pt,itemsep=0pt]
+                {
+                    \item Involved in initial phases of design analysis and elicitation of requirements.
+                    \item Involved in deploying and hosting phases of .Net Core Web Application.
+                    \item Deployed and maintain a .Net Core Web application on a Linux Server.
+                    \item Managed MariaDB database.
+                    \item Write a script to backup the MariaDB database daily.
 
-\cvsection{Education}
-\cvevent{N.Dip Computer Systems Engineering}{Tshwane University of Technology}{2018 -- 2020}{}
-\begin{itemize}
-   \item[--] Achieve four distinctions in Object-oriented Programming and Computer Skills.
-   \item[--] Modules: Communication Skills, Computer Skills, Digital Systems, Electrical Engineering, Electronics, Mathematics, Programming, Network Systems, Project, Digital Process Control, Operating Systems, Systems Analysis, Database Principles, Logic Design, Operational Research, Software Engineering
-\end{itemize}
-\divider
-\cvevent{High School Diploma}{Sincobile Secondary School}{2009 --- 2013}{}
-\begin{itemize}
-   \item[--] Achieve a distinction in Mathematics and levels 6 and 5 in the rest of the subjects
-   \item[--] Subjects: SiSwati Home Language, English First Additional Language, Mathematics, Life Orientation, Agricultural Science, Geography, Life Sciences, Physical Sciences
-\end{itemize}
+                    % \item Followed Test Driven Development to develop the Asp.Net Application.
+                    % \item Write clean, scalable code using C\# and .Net Framework.
+                    % \item Responsible for creating efficient design and developing User Interaction screens using HTML, CSS3, Bootstrap, JavaScript, and React/NextJS
+                    % \item Responsible for creating efficient design and developing User Interaction screens using HTML, CSS3, Bootstrap, JavaScript, and Angular
+                    % \item Used ADO.NET for SQL database interaction using Data Reader Dataset and Data view.
+                    % \item Designed and Developed ASP.NET User Controls and used ASP.NET WebForms.
+                    % \item Participated in the maintenance phase of the project
+                    % \item Worked on GIT as version control. Utilized NPM scripts for building and testing environments in a Node.js application.
+                    % \item Enhanced application performance by Angular 11 Component-based development.
 
-\cvsection{Project}
-\cvproj{Metal Purchasing System}{
-A Full-Stack Web application built with .Net Core 5, The application simplifies the process of managing orders through a spreadsheet. It allows the user to create an order and send an email to the supplier. The application  is running on a Debian server using apache web sever
-}{\href{https://magibela.netlify.app/}{45.79.173.203}}
+                }
+                \end{itemize}
 
-\cvproj{Music Web Application}{
-Music Web Application built with Javascript, HTML, and CSS that calls the Spotify REST API to play a top song of an artist
-}{\href{https://magibela.netlify.app/}{magibela.netlify.app/} }
+            \item \frcontent{.NET Developer Intern}{The Horizon HR - Mindrand}{March 2021 -- December 2022}
+                \begin{itemize}[topsep=0pt,itemsep=0pt]
+                {
+                    \item Participated in the maintenance phase of a .NET Web API project
+                    \item Developed Tests for Unit testing of the developed components using the N Unit Testing Framework
+                    \item Involved in Application Support and releasing the fixes
+                    \item Provide software support to end-users
+                    \item Develop Front-End Applications using NextJS and React
+                    \item Develop Front-End Applications using Angular and TypeScript
 
-\cvproj{Online Cellphone Store}{
-React Single Page Application. A Demo Online Website that sells Cellphones. I have used Context Management to manage the state of the application
-}{\href{https://cell-phone-store.netlify.app/}{https://cell-phone-store.netlify.app/} }
+                    % \item Design and Develop an HTML form with a drag and drop feature in React.
+                    % \item Design and Develop an HTML form with a drag and drop feature in Angular.
+                    % \item Used SASS, SCSS, and CSS intensive to style Web Applications
+                    % \item Addressed regular production bugs.
+                    % \item Improved landing page and made it responsive to mobile devices.
+                    % \item Involved in writing application level code to interact with APIs, Web services using AJAX, JSON, and XML
 
-\switchcolumn
+                }
+                \end{itemize}
 
-\cvsection{Referees}
-\cvref{Mpho Phahlamohlaka}{Colleague at University}{mphophahhh@gmail.com}
-{064 891 7189}
-\divider
-\cvref{Tshepiso Williams}{Mentor at The Horizon}{tshepisowilliams@gmail.com}
-{082 909 9506}
-\newpage
 
-\end{paracol}
+            \item \frcontent{C++ Programming Tutor }{Tshwane University of Technolog - Pretoria}{Febuary 2020 -- Dec 2020}
+                \begin{itemize}[topsep=0pt,itemsep=0pt]
+                {
+                    \item Assisting students in understand the fundamentals of C++ and OOP in the context of C++
+                    \item Assisting students with homework, projects, test preparation, papers, research, and other academic tasks
+                }
+                \end{itemize}
 
+        \end{itemize}
+    }
+
+    \csection{Education}{\small
+        \begin{itemize}
+            \item \frcontent{N.Dip Computer Systems Engineering}{Tshwane University of Technology}{}{2020}
+                \begin{itemize}[topsep=0pt,itemsep=0pt]
+                {
+                \item Achieve four distinctions in \textbf{Object-Oriented  Programming} and \textbf{Computer Skills}.
+                    \item Modules: Communication Skills, Computer Skills, Digital Systems, Electrical Engineering, Electronics, Mathematics, Programming, Network Systems, Project, Digital Process Control, Operating Systems, Systems Analysis, Database Principles, Logic Design, Operational Research, Software Engineering
+                }
+                \end{itemize}
+
+
+            \item \frcontent{High School Diploma}{Sincobile Secondary School}{}{2013}
+                \begin{itemize}[topsep=0pt,itemsep=0pt]
+                {
+                    \item Achieve a distinction in \textbf{Mathematics} and levels 6 and 5 in the rest of the subjects
+                }
+                \end{itemize}
+
+        \end{itemize}
+    }
+
+
+    \csection{Projects}{\small
+        \begin{itemize}
+            \item \fpcontent{Metal Purchasing System \clink{\href{https://45.79.173.203}{[45.79.173.203]}}}
+                {A Full-Stack Web application built with \textbf{.Net Core 5}, The application simplifies the process of managing orders through a spreadsheet. It allows the user to create an order and send an email to the supplier. The application  is running on a Debian server using apache web sever}{}
+
+
+            \item \fpcontent{Music Web Application\clink{\href{https://magibela.netlify.app/}{[magibela.netlify.app/]}}}
+                {Music Web Application built with Javascript, HTML, and CSS that calls the Spotify REST API to play a top song of an artist}{}
+
+
+            \item \fpcontent{Online Cellphone Store\clink{\href{https://cell-phone-store.netlify.app/}{[https://cell-phone-store.netlify.app/]}}}
+                {React Single Page Application. A Demo Online Website that sells Cellphones. I have used Context Management to manage the state of the application}{}
+
+        \end{itemize}
+    }
+
+
+    \csection{CERTIFICATIONS}{\small
+        \begin{itemize}
+            \item { Azure DevOps Engineer Exper - issued: 8 October 2021 - \clink{\href{https://www.credly.com/badges/80f2454f-f8de-4e74-9575-a01edf459fde}{[https://cutt.ly/DRI8NYP]}}}
+            \item { Azure Developer Associate- issued: 8 July 2021 - \clink{\href{https://www.credly.com/badges/2b9449fa-ea3c-4baa-9362-2b1c6f69636e}{[https://cutt.ly/tRI4WYo]}}}
+            \item { Azure Fundamentals - issued: 26 April 2021 - \clink{\href{https://www.credly.com/badges/eb7f2969-df90-4138-b898-bcb9f57389e1}{[https://cutt.ly/sRI3GgJ]}}}
+        \end{itemize}
+    }
+
+% \end{paracol}
 \end{document}

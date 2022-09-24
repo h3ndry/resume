@@ -36,3 +36,12 @@
         }
     }
 }{}
+
+\newenvironment{fpcontent}[2]{
+    {
+        \textbf{#1} \leavevmode\newline
+        {
+            \ifthenelse{\equal{#2}{}}{}{{#2 \leavevmode\newline}}
+        }
+    }
+}{}
