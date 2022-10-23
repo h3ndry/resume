@@ -1,4 +1,4 @@
-build: main.tex altacv.cls
+build: main.tex resume.cls
 	pdflatex -jobname=hendry_khoza_resume main.tex
 	pdftk hendry_khoza_resume.pdf \
 	./docs/matric_results.pdf \
