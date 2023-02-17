@@ -1,161 +1,186 @@
-\documentclass{resume}
-\geometry{left=0.8cm,right=0.8cm,top=1cm,bottom=1cm,columnsep=1cm}
-\usepackage{paracol}
-\usepackage{setspace}
-\usepackage{lipsum}
-\usepackage{enumitem}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Developer CV
+% LaTeX Template
+% Version 1.0 (28/1/19)
+%
+% This template originates from:
+% http://www.LaTeXTemplates.com
+%
+% Authors:
+% Jan Vorisek (jan@vorisek.me)
+% Based on a template by Jan Küster (info@jankuester.com)
+% Modified for LaTeX Templates by Vel (vel@LaTeXTemplates.com)
+%
+% License:
+% The MIT License (see included LICENSE file)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\renewcommand{\baselinestretch}{0.8}
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
 
-\usepackage{hyperref}
-\hypersetup{
-    colorlinks=true,
-    linkcolor=blue,
-    filecolor=magenta,
-    urlcolor=cyan,
-    pdftitle={Overleaf Example},
-    pdfpagemode=FullScreen,
-    }
+\documentclass[9pt]{developercv} % Default font size, values from 8-12pt are recommended
 
+%----------------------------------------------------------------------------------------
 
 \begin{document}
 
-\fontfamily{ppl}\selectfont
+%----------------------------------------------------------------------------------------
+%	TITLE AND CONTACT INFORMATION
+%----------------------------------------------------------------------------------------
 
-\begin{huge}\noindent \textbf{HENDRY KHOZA }\end{huge} \newline
-\begin{paracol}{3}
-        \noindent
-        \clink{\href{mailto:h3khoza@gmail.com}{h3khoza@gmail.com}} \newline
-        \clink{+27 81 249 0306}
-\switchcolumn
-\noindent
-        \clink{ \href{https://h3ndry.me/}{www.h3ndry.me}}\newline
-        \clink{Pretoria, Gauteng, RSA}\newline
-\switchcolumn
-\noindent
-        \clink{ \href{https://www.linkedin.com/in/h3ndry/}{linkedin.com/in/h3ndry}} \newline
-        \clink{ \href{https://github.com/h3ndry}{github.com/h3ndry}}
-\end{paracol}
+\begin{minipage}[t]{0.45\textwidth} % 45% of the page width for name
+	\vspace{-\baselineskip} % Required for vertically aligning minipages
 
-    \csection{SKILLS}{\small
-    \setlength{\parskip}{6pt}
-        \noindent
-        \clink {C\# | .NET | JavaScript | TypeScript | C++ | C | Bash  | Node | Python | SQL | NoSQL | Git } \newline
-        \clink {Linux | Gitlab | DevOps | CI/CD | Neovim | Jest | GitHub | Unit Testing | FastAPI | Docker }
-        \clink{  Microservices | Kubernetes | Frontend | Backend | Full-Stack | Tilt | BigQuery | Firebase } \newline
-        }
+	% If your name is very short, use just one of the lines below
+	% If your name is very long, reduce the font size or make the minipage wider and reduce the others proportionately
+	\colorbox{black!10}{{\HUGE\textcolor{black}{\textbf{\MakeUppercase{Hendry}}}}} % First name
 
-    \csection{EXPERIENCE}{\small
-        \begin{itemize}
-            \item \frcontent{Full-Stack Software Engineer}{Kriterion - Menlo Park, Pretoria}{July 2022 -- Present}
-                \begin{itemize}[topsep=0pt,itemsep=0pt]
-                {
-                \item Developed and maintain full-stack web applications using \textbf{Python (FastAPI)}, \textbf{Bash}, \textbf{SQL}, and \textbf{TypeScript (React)}.
-                \item Experience with containerization and deployment using \textbf{Docker} and \textbf{Kubernetes}.
-                \item Utilized cloud platforms, specifically \textbf{Google Cloud}, to deploy and maintain software systems.
-                \item Improved developer experience by creating a bash script that clones all repositories on a \textbf{Gitlab} group, making it possible to run the \textbf{Kubernetes cluster} on a local machine using \textbf{Tilt }.
-                \item Developed test automation scripts with \textbf{pytest} for the development team to enable \textbf{test-driven} development, reducing the number of bugs found in production.
-                \item Part of a team that converted \textbf{Javascript} code to \textbf{TypeScript}.
-                \item Optimized complex \textbf{SQL} queries, making them 20\% faster in execution.
-                \item Involved in writing \textbf{Docker} configuration files for Python and JavaScript applications to be hosted on a Kubernetes cluster.
-                \item Improved the front-end application by updating \textbf{React} from version 16 to version 18 and React-Router from version 4 to version 5, which improved performance and first rendering speed.
-                \item Rewrote the state management of the React application using \textbf{ Context API } and \textbf{React Query}.
-                \item Wrote unit tests for the front-end application using Jest and \textbf{React-Testing} Library.
-                }
-                \end{itemize}
+	\colorbox{black!10}{{\HUGE\textcolor{black}{\textbf{\MakeUppercase{Khoza}}}}} % Last name
 
+	\vspace{6pt}
 
-            \item \frcontent{Junior Software Engineer}{Copalcor (Pty) Ltd - Gemiston, Wideville}{January 2022 -- June 2022}
-                \begin{itemize}[topsep=0pt,itemsep=0pt]
-                {
-                \item Involved in initial phases of design analysis and elicitation of requirements of a \textbf{.NET Core} Web application using \textbf{ML diagram.}
-                \item Deployed and maintain a \textbf{.NET} core web application on a \textbf{Linux} Server hosted on \textbf{Linode}
-                \item Followed \textbf{test-driven} development to write clean scalable code using \textbf{C\#} and \textbf{.Net} framework on a \textbf{Linux} environment
-                \item Responsible for creating efficient design and developing User Interaction screens using \textbf{HTML},  \textbf{CSS3}, \textbf{Bootstrap}, \textbf{JavaScript}, and \textbf{React/NextJS}
-                \item Worked on \textbf{GIT} as version control. Utilized \textbf{NPM} scripts for building and testing environments
-                \item Used .Net core entity framework to run the migration and create schemas on a MySQL server
-                \item Configured the database and the application on the apache server
-                % \item Work intensively on a Linux terminal access remote host and configuration.
-                }
-                \end{itemize}
+	{\huge Web App Architect} % Career or current job title
+\end{minipage}
+\begin{minipage}[t]{0.275\textwidth} % 27.5% of the page width for the first row of icons
+	\vspace{-\baselineskip} % Required for vertically aligning minipages
 
-            \item \frcontent{.NET Developer Intern}{The Horizon HR - Midrand}{January 2021 -- December 2021}
-                \begin{itemize}[topsep=0pt,itemsep=0pt]
-                {
-                \item Participated in the maintenance phase of a .NET Web API project
-                \item Developed Tests for Unit testing of the developed components using the N Unit Testing Framework
-                \item Involved in Application Support and releasing the fixes
-                \item Provide software support to end-users
-                \item Develop Front-End Applications using NextJS and React
-                \item Develop Front-End Applications using Angular and TypeScript
-                }
-                \end{itemize}
+	% The first parameter is the FontAwesome icon name, the second is the box size and the third is the text
+	% Other icons can be found by referring to fontawesome.pdf (supplied with the template) and using the word after \fa in the command for the icon you want
+	\icon{MapMarker}{12}{Black Mesa East}\\
+	\icon{Phone}{12}{+1 123 456 789}\\
+	\icon{At}{12}{\href{mailto:alyx@vance.me}{alyx@vance.me}}\\
+\end{minipage}
+\begin{minipage}[t]{0.275\textwidth} % 27.5% of the page width for the second row of icons
+	\vspace{-\baselineskip} % Required for vertically aligning minipages
 
+	% The first parameter is the FontAwesome icon name, the second is the box size and the third is the text
+	% Other icons can be found by referring to fontawesome.pdf (supplied with the template) and using the word after \fa in the command for the icon you want
+	\icon{Globe}{12}{\href{https://alyx.vance.me}{alyx.vance.me}}\\
+	\icon{Github}{12}{\href{https://github.com/alyxvance}{github.com/alyxvance}}\\
+	\icon{Twitter}{12}{\href{https://twitter.com/@alyxvance}{@alyxvance}}\\
+\end{minipage}
 
-            \item \frcontent{C++ Programming Tutor }{Tshwane University of Technology - Pretoria}{February 2020 -- Dec 2020}
-                \begin{itemize}[topsep=0pt,itemsep=0pt]
-                {
-                \item Assisting students in understand the fundamentals of C++ and OOP in the context of C++
-                \item Assisting students with homework, projects, test preparation, papers, research, and other academic tasks
-                }
-                \end{itemize}
+\vspace{0.5cm}
 
-        \end{itemize}
-    }
+%----------------------------------------------------------------------------------------
+%	INTRODUCTION, SKILLS AND TECHNOLOGIES
+%----------------------------------------------------------------------------------------
 
-    \csection{EDUCATION}{\small
-        \begin{itemize}
-            \item \frcontent{N.Dip Computer Systems Engineering}{Tshwane University of Technology}{}{2020}
-                \begin{itemize}[topsep=0pt,itemsep=0pt]
-                {
-                \item Achieve four distinctions in \textbf{Object-Oriented  Programming} and \textbf{Computer Skills}.
-                \item Modules: Communication Skills, Computer Skills, Digital Systems, Electrical Engineering, Electronics, Mathematics, Programming, Network Systems, Project, Digital Process Control, Operating Systems, Systems Analysis, Database Principles, Logic Design, Operational Research, Software Engineering
-                }
-                \end{itemize}
+\cvsect{Who Am I?}
 
+\begin{minipage}[t]{0.4\textwidth} % 40% of the page width for the introduction text
+	\vspace{-\baselineskip} % Required for vertically aligning minipages
 
-            \item \frcontent{High School Diploma}{Sincobile Secondary School}{}{2013}
-                \begin{itemize}[topsep=0pt,itemsep=0pt]
-                {
-                    \item Achieve a distinction in \textbf{Mathematics} and levels 6 and 5 in the rest of the subjects
-                }
-                \end{itemize}
+	\lorem \lorem \lorem \lorem \lorem\\ % Dummy text
+\end{minipage}
+\hfill % Whitespace between
+\begin{minipage}[t]{0.5\textwidth} % 50% of the page for the skills bar chart
+	\vspace{-\baselineskip} % Required for vertically aligning minipages
 
-        \end{itemize}
-    }
+    \setlength{\tabcolsep}{0.4em}
+    \begin{tabular}{ r l}
+        \colorbox{black!30}{Languages} & \cvtag{TypeScript} \cvtag{CSS} \cvtag{SASS} \cvtag{MySql} \cvtag{C\#}  \vspace{0.3em} \\
+        \colorbox{black!30}{Tools} & \cvtag{Neovim} \cvtag{Arch Linux} \cvtag{LSP} \cvtag{Pycharm} \cvtag{Postman}  \vspace{0.3em} \\
+        \colorbox{black!30}{Design} & cell2 \vspace{0.3em} \\
+        \colorbox{black!30}{Databases} & cell2 \vspace{0.3em} \\
+        \colorbox{black!30}{Databases} & cell2 \\
+    \end{tabular}
 
+	% \begin{barchart}{5.5}
+	% 	\baritem{JavaScript}{60}
+	% 	\baritem{PHP}{100}
+	% 	\baritem{SASS/LESS}{70}
+	% 	\baritem{Bootstrap}{70}
+	% 	\baritem{Git}{40}
+	% 	\baritem{LaTeX}{60}
+	% \end{barchart}
 
-    \csection{PROJECTS}{\small
-        \begin{itemize}
+\end{minipage}
 
-            \item \fpcontent{Carpentry Shop - Net Core Web Application \clink{\href{http://178.79.147.9:50/}{[http://178.79.147.9:50/]}}}
-                { Carpentry Shop is a \textbf{full-stack} web application built with a .Net core framework and SQLite database. The application allows users to order carpentry online and notify them when ready to collect.
-                Futures include \textbf{form validation}, admin dashboard, email and password \textbf{authentication}
-                \clink{\href{https://h3ndry.me/projects/carpentry-shop-net-core-web-application}{read more}}}{}
+% \begin{center}
+% 	\bubbles{5/Eclipse, 6/git, 4/Office, 3/Inkscape, 3/Blender}
+% \end{center}
 
+%----------------------------------------------------------------------------------------
+%	EXPERIENCE
+%----------------------------------------------------------------------------------------
 
-            \item \fpcontent{Online Cellphone Store \clink{\href{https://cell-phone-store.netlify.app/}{[https://cell-phone-store.netlify.app/]}}}
-                {React Single Page Application. A Demo Online Website that sells Cellphones. I have used Context Management to manage the state of the application}{}
+\cvsect{Experience}
 
+\begin{entrylist}
+	\entry
+		{2017 -- 3/2018}
+		{Front-end developer}
+		{Big Corporation Name Inc.}
+		{\lorem \lorem \lorem\\ \texttt{node.js}\slashsep\texttt{Vue.js}\slashsep\texttt{Electron}}
+	\entry
+		{2015 -- 2018\\\footnotesize{part time}}
+		{Full stack developer}
+		{Famous Eshop Inc.}
+		{\lorem\lorem\\ \texttt{PHP}\slashsep\texttt{JS}\slashsep\texttt{MariaDB}\slashsep\texttt{Linux}}
+	\entry
+		{2013 -- 2014\\\footnotesize{part time}}
+		{Junior PHP Developer}
+		{example.com}
+		{\lorem\lorem\\ \texttt{PHP}\slashsep\texttt{Laravel}}
+\end{entrylist}
 
-            \item \fpcontent{Matric Dashboard: Tracking Pass Rates}
-                {This project is still a work in progress, but the idea is to build a dashboard for the matric results.
-                The dashboard visually represents the pass rate trends over time and allows users to view the results by
-                school, region, and other relevant categories. You can track my progress on \clink{\href{https://github.com/h3ndry/matric-dashbord}{github}}}{}
+%----------------------------------------------------------------------------------------
+%	EDUCATION
+%----------------------------------------------------------------------------------------
 
+\cvsect{Education}
 
-            % \item \fpcontent{Music Web Application\clink{\href{https://magibela.netlify.app/}{[magibela.netlify.app/]}}}
-            %     {Music Web Application built with \textbf{JavaScript}, \textbf{HTML}, and \textbf{CSS} that calls the Spotify \textbf{REST API} to play a top song of an artist}{}
+\begin{entrylist}
+	\entry
+		{2013 -- 2017}
+		{Master's Degree}
+		{Another University Name}
+		{\lorem\lorem\lorem}
+	\entry
+		{2014}
+		{Postgraduate Diploma}
+		{A University Name}
+		{\lorem\lorem}
+	\entry
+		{2007 -- 2013}
+		{Bachelor's Degree}
+		{A University Name}
+		{\lorem\lorem}
+\end{entrylist}
 
+%----------------------------------------------------------------------------------------
+%	ADDITIONAL INFORMATION
+%----------------------------------------------------------------------------------------
 
-        \end{itemize}
-    }
+\begin{minipage}[t]{0.3\textwidth}
+	\vspace{-\baselineskip} % Required for vertically aligning minipages
 
-    \csection{CERTIFICATIONS}{\small
-        \begin{itemize}
-            \item { Azure DevOps Engineer Expert - issued: 8 October 2021 - \clink{\href{https://www.credly.com/badges/80f2454f-f8de-4e74-9575-a01edf459fde}{[https://cutt.ly/DRI8NYP]}}}
-            \item { Azure Developer Associate- issued: 8 July 2021 - \clink{\href{https://www.credly.com/badges/2b9449fa-ea3c-4baa-9362-2b1c6f69636e}{[https://cutt.ly/tRI4WYo]}}}
-            \item { Azure Fundamentals - issued: 26 April 2021 - \clink{\href{https://www.credly.com/badges/eb7f2969-df90-4138-b898-bcb9f57389e1}{[https://cutt.ly/sRI3GgJ]}}}
-        \end{itemize}
-    }
+	\cvsect{Languages}
+
+	\textbf{English} - native\\
+	\textbf{German} - proficient\\
+	\textbf{Polish} - rudimentary
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.3\textwidth}
+	\vspace{-\baselineskip} % Required for vertically aligning minipages
+
+	\cvsect{Hobbies}
+
+	I love... \lorem
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.3\textwidth}
+	\vspace{-\baselineskip} % Required for vertically aligning minipages
+
+	\cvsect{Non profit}
+
+	I help... \lorem
+\end{minipage}
+
+%----------------------------------------------------------------------------------------
+
 \end{document}
