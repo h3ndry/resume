@@ -1,4 +1,4 @@
-build: main.tex resume.cls
+build: main.tex developercv.cls
 	pdflatex -jobname=hendry_khoza_resume main.tex
 	pdftk hendry_khoza_resume.pdf \
 	./docs/graduation_letter.pdf \
