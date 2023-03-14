@@ -58,10 +58,10 @@
 
 \geometry{
 	paper=a4paper, % Paper size, change to letterpaper for US letter size
-	top=1.75cm, % Top margin
+	top=1.3cm, % Top margin
 	bottom=0.75cm, % Bottom margin
-	left=1.8cm, % Left margin
-	right=1.8cm, % Right margin
+	left=1cm, % Left margin
+	right=1.5cm, % Right margin
 	headheight=0.75cm, % Header height
 	footskip=1cm, % Space from the bottom margin to the baseline of the footer
 	headsep=0.5cm, % Space from the top margin to the baseline of the header
@@ -75,12 +75,17 @@
 \usepackage[utf8]{inputenc} % Required for inputting international characters
 \usepackage[T1]{fontenc} % Output font encoding for international characters
 
-\usepackage[default]{raleway}
-%\usepackage[defaultsans]{droidsans}
+% \usepackage[default]{raleway}
+% \usepackage[defaultsans]{droidsans}
 %\usepackage{cmbright}
-%\usepackage{fetamont}
-%\usepackage[default]{gillius}
-%\usepackage{roboto}
+% \usepackage{fetamont}
+% \usepackage[default]{gillius}
+\usepackage{roboto}
+% \setmainfont{Futura Book}
+
+
+% \usepackage{fontspec}
+% \setmainfont{Futura Medium}[ItalicFont={Futura Medium Italic}]
 
 \renewcommand*\familydefault{\sfdefault} % Force the sans-serif version of any font used
 
@@ -213,7 +218,7 @@
 	&\parbox[t]{0.825\textwidth}{% 82.5% of the text width of the page
 		\textbf{#2}% Entry heading text
 		\hfill% Horizontal whitespace
-		{\footnotesize \textbf{\textcolor{black}{#3}}}\\% Right-aligned entry qualifier text
+		{\textbf{\textcolor{black}{#3}}}\\% Right-aligned entry qualifier text
 		#4 % Entry description text
 	}\\\\}
 
