@@ -1,5 +1,5 @@
 build: main.tex developercv.cls
-	pdflatex -jobname=hendry_khoza_resume main.tex
+	xelatex -jobname=hendry_khoza_resume main.tex
 	pdftk hendry_khoza_resume.pdf \
 	./docs/graduation_letter.pdf \
 	./docs/university_transcript_certified.pdf \

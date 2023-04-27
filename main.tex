@@ -1,18 +1,23 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Developer CV
-% LaTeX Template
-% Version 1.0 (28/1/19)
+% Freeman Curriculum Vitae
+% XeLaTeX Template
+% Version 3.0 (September 3, 2021)
 %
 % This template originates from:
-% http://www.LaTeXTemplates.com
+% https://www.LaTeXTemplates.com
 %
 % Authors:
-% Jan Vorisek (jan@vorisek.me)
-% Based on a template by Jan Küster (info@jankuester.com)
-% Modified for LaTeX Templates by Vel (vel@LaTeXTemplates.com)
+% Vel (vel@LaTeXTemplates.com)
+% Alessandro Plasmati
 %
 % License:
-% The MIT License (see included LICENSE file)
+% CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/)
+%
+%!TEX program = xelatex
+% NOTE: this template must be compiled with XeLaTeX rather than PDFLaTeX
+% due to the custom fonts used. The line above should ensure this happens
+% automatically, but if it doesn't, your LaTeX editor should have a simple toggle
+% to switch to using XeLaTeX.
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -20,158 +25,410 @@
 %	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
 %----------------------------------------------------------------------------------------
 
-\documentclass[10pt]{developercv} % Default font size, values from 8-12pt are recommended
-\usepackage[none]{hyphenat}
+\documentclass[
+	12pt, % Default font size, can be between 8pt and 12pt
+]{FreemanCV}
+
+\usepackage{enumitem}
+\columnratio{0.55, 0.45} % Widths of the two columns, specified here as a ratio summing to 1 to correspond to percentages; adjust as needed for your content
+% set itemize spacing globally
+\setlist[itemize]{topsep=0pt, itemsep=0pt, parsep=0pt}
+
+% Headers and footers can be added with the following commands: \lhead{}, \rhead{}, \lfoot{} and \rfoot{}
+% Example right footer:
+%\rfoot{\textcolor{headings}{\sffamily Last update: \today. Typeset with Xe\LaTeX}}
+
+%----------------------------------------------------------------------------------------
 
 \begin{document}
 
-%----------------------------------------------------------------------------------------
-%	TITLE AND CONTACT INFORMATION
-%----------------------------------------------------------------------------------------
-
-\begin{minipage}[t]{0.45\textwidth} % 45% of the page width for name
-	\vspace{-\baselineskip} % Required for vertically aligning minipages
-
-	\colorbox{black!10}{{\HUGE\textcolor{black}{\textbf{\MakeUppercase{Hendry}}}}} % First name
-
-	\colorbox{black!10}{{\HUGE\textcolor{black}{\textbf{\MakeUppercase{Khoza}}}}} % Last name
-
-	\vspace{6pt}
-
-	{\huge Software Engineer} % Career or current job title
-\end{minipage}
-\begin{minipage}[t]{0.275\textwidth} % 27.5% of the page width for the first row of icons
-	\vspace{-\baselineskip} % Required for vertically aligning minipages
-
-	\icon{MapMarker}{12}{Guateng Pretoria}\\
-	\icon{Phone}{12}{+27 81 249 0306}\\
-	\icon{At}{12}{\href{mailto:h3khoza@gmail.com}{h3khoza@gmail.com}}\\
-\end{minipage}
-\begin{minipage}[t]{0.275\textwidth} % 27.5% of the page width for the second row of icons
-	\vspace{-\baselineskip} % Required for vertically aligning minipages
-
-	% The first parameter is the FontAwesome icon name, the second is the box size and the third is the text
-	% Other icons can be found by referring to fontawesomhttps://chat.openai.com/chate.pdf (supplied with the template) and using the word after \fa in the command for the icon you want
-	\icon{Globe}{12}{\href{https://h3ndry.me/}{https://h3ndry.me}}\\
-	\icon{Github}{12}{\href{https://github.com/h3ndry}{github.com/h3ndry}}\\
-	\icon{Linkedin}{12}{\href{https://www.linkedin.com/in/h3ndry/}{linkedin.com/in/h3ndry}}\\
-\end{minipage}
-
-\vspace{0.5cm}
+\begin{paracol}{2} % Begin two-column mode
 
 %----------------------------------------------------------------------------------------
-%	INTRODUCTION, SKILLS AND TECHNOLOGIES
+%	YOUR NAME AND CURRICULUM VITAE TITLE
 %----------------------------------------------------------------------------------------
 
-\cvsect{Skills}
+\parbox[][0.11\textheight][c]{\linewidth}{ % Box to hold your name and CV title; change the fixed height as needed to match the colored box to the right
+	\centering % Horizontally center text
 
-\setlength{\tabcolsep}{0.4em}
-\begin{tabular}{ r l}
-    \cvsectt{LANGUAGES} & \cvtag{TypeScript} \cvtag{JavaScript} \cvtag{C\#} \cvtag{C++} \cvtag{React}  \cvtag{Django} \cvtag{Python}  \cvtag{HTML} \cvtag{CSS} \cvtag{Flask} \cvtag{SQL}  \vspace{0.3em} \\
-    \cvsectt{TECHNOLOGIES} & \cvtag{Agile} \cvtag{SDLC} \cvtag{DevOps} \cvtag{Kubernetes}\cvtag{Docker}  \cvtag{Git} \cvtag{NextJS} \cvtag{NextJS} \vspace{0.3em} \\
-    \cvsectt{Cloud} & \cvtag{Azure} \cvtag{GCloud} \cvtag{AWS} \cvtag{CI/CD} \cvtag{TDD} \vspace{0.3em} \\
-\cvsectt{DATABASES } & \cvtag{MySQL} \cvtag{Postgres} \cvtag{SQL Servers} \cvtag{Oracle DB}   \vspace{0.3em} \\ \vspace{0.3em} \\
-\end{tabular}
+	{\sffamily\Huge Dr. Hendry Khoza} % Your name
+
+	\medskip % Vertical whitespace
+
+	{\cursivefont\Huge\textcolor{headings}{Curriculum Vitae}}
+
+	\vfill % Push content to the top of the box
+}
+
+
+\switchcolumn % Switch to the second (right) column
+
+%----------------------------------------------------------------------------------------
+%	COLORED CONTACT DETAILS BOX
+%----------------------------------------------------------------------------------------
+
+\parbox[top][0.11\textheight][c]{\linewidth}{ % Box to hold the colored box; change the fixed height as needed to match the box to the left
+	\colorbox{shade}{ % Create colored box and specify background color
+		\begin{supertabular}{@{\hspace{3pt}} p{0.05\linewidth} | p{0.775\linewidth}} % Start a table with two columns, the table will ensure everything is aligned
+			\raisebox{-1pt}{\faHome} & 26 Frangipani, Chantelle X16\\ % Address
+			\raisebox{-1pt}{\faPhone} & +27 81 249 0306 \\ % Phone number
+			\raisebox{-1pt}{\small\faEnvelope} & \href{mailto:g.freeman@bmrf.us}{g.freeman@bmrf.us} \\ % Email address
+			\raisebox{-1pt}{\small\faDesktop} & \href{https://www.LaTeXTemplates.com}{https://www.LaTeXTemplates.com} \\ % Website
+			%\raisebox{-1pt}{\faGithub} & \href{https://github.com/username}{https://github.com/username} \\ % GitHub profile
+			%\raisebox{-1pt}{\faLinkedinSquare} & \href{https://www.linkedin.com/in/username}{https://www.linkedin.com/in/username} \\ % LinkedIn profile
+			% See fontawesome.pdf in the Fonts folder for all icons you can use
+		\end{supertabular}
+	}
+	\vfill % Push content to the top of the box
+}
+
+\end{paracol} % End two-column mode
+
+
 
 
 
 %----------------------------------------------------------------------------------------
-%	EXPERIENCE
+%	MAJOR RESEARCH PROJECT
 %----------------------------------------------------------------------------------------
 
-\cvsect{Experience}
+\section{Skills \& Technologies}
 
-\begin{entrylist}
-	\entry
-		{08/2021 -- current\\\footnotesize{permanent}}
-		{Software Engineer}
-		{KRITERION}
-		{
-            Developed and maintained full-stack web applications using \textbf{Python} (FastAPI), \textbf{Bash}, \textbf{SQL}, and \textbf{TypeScript} (React).
-            Proficient in containerization and deployment technologies such as \textbf{Docker} and \textbf{Kubernetes}.
-            Deployed and maintained software systems on cloud platforms like \textbf{AWS}, ensuring high availability and scalability.
-            Improved developer experience by creating a Bash script to automate the cloning of \textbf{Gitlab} repositories and streamline the development process.
-            Practised test-driven development by developing test automation scripts, resulting in improved software quality and faster delivery.
-            Skilled in writing unit tests using Jest and React-Testing Library to ensure the reliability and functionality of code.\\
-            \texttt {node.js}\slashsep\texttt{React}\slashsep\texttt{Python}\slashsep\texttt{Docker}\slashsep\texttt{SQL}
-        }
-	\entry
-		{01/2021 -- 08/2021 \\\footnotesize{contract}}
-		{Software Developer}
-		{COPALCOR (Pty) Ltd}
-		{
-            Worked as a web developer on a \textbf{.NET Core} web application, involved in the initial phases of design analysis and elicitation of requirements using ML diagrams.
-            Successfully deployed and maintained the web application on a Linux server hosted on Linode.
-            Designed and developed user interaction screens with HTML, CSS3, Bootstrap, JavaScript to create efficient and user-friendly designs.\\
-            \texttt{Git} \slashsep\texttt{.Net Core}\slashsep\texttt{MariaDB}\slashsep\texttt{Linux} \slashsep\texttt{Git}
-        }
+{\raggedright\textbf{``Observation of Einstein-Podolsky-Rosen Entanglement on Supraquantum Structures by Induction Through Nonlinear Transuranic Crystal of Extremely Long Wavelength Pulse from Mode-Locked Source Array"}\par}
 
-	\entry
-		{11/2019 -- 12/2020 \\\footnotesize{internship}}
-		{.NET Developer Intern}
-		{HORIZON HR}
-		{
-            Participated in the maintenance phase of a \textbf{.NET Web API} project.
-            Developed Tests for Unit testing of the developed components using the N Unit Testing Framework.
-            Involved in Application Support and releasing the fixes.
-            Provide software support to end-users
-            Develop Front-End Applications using and React \\
-            \texttt{.NET Core} \slashsep\texttt{SQL} \slashsep\texttt{JavaScript} \slashsep\texttt{React}
-    }
-\end{entrylist}
+\medskip % Vertical whitespace
+
+My research examined the use of ELW pulses from a mode-locked source array inducted through transuranic crystals to observe entanglement on supraquantum structures. Theoretical advancements included prediction of quantum resonance phenomena including the possibility of resonance cascades. I was motivated to conduct this doctoral research due to my passion for teleportation of matter and I believe I have laid the foundation for further experimental validation and development of practical outcomes.
+
+\medskip % Extra vertical whitespace before the next section
+
+%----------------------------------------------------------------------------------------
+%	WORK EXPERIENCE
+%----------------------------------------------------------------------------------------
+
+\section{Work Experience}
+
+% Each job is added with a \jobentry command. Below is an empty one to use as a template:
+
+%\jobentry
+%	{} % Duration
+%	{} % FT/PT (full time or part time)
+%	{} % Employer
+%	{} % Job title
+%	{} % Description
+
+% All 5 parameters must be supplied but any can be empty if you don't need them
+
+%------------------------------------------------
+
+\jobentry
+	{Kriterion} % Company name
+	{Current, from Jan 1995} % Duration
+	{FT} % FT/PT (full time or part time)
+    {Software Engineer (FullStack)} % Job title
+    {
+        \begin{itemize}
+            \item As part of this promotion, I began conducting nuclear and subatomic
+            \item research in the Anomalous Materials department. My team and I are
+            \item particularly interested in dimensionality and its interaction with
+            \item spacetime. The focus is on practical outcomes and applications in
+            \item teleportation and communication with distal locations.
+        \end{itemize}
+
+} % Description
+
+%------------------------------------------------
+
+\jobentry
+	{Feb 1991 -- Jan 1995} % Duration
+	{FT} % FT/PT (full time or part time)
+	{Black Mesa Research Facility} % Employer
+	{Level 3 Research Associate} % Job title
+	{This position involved transitioning from purely theoretical work to experimental applications utilising the immense resources of Black Mesa. The transition required an initial learning curve in hazard containment, health and safety procedures and operating experimental infrastructure. Manipulating valves, carts, buttons, levers, etc considerably increased my physical fitness.} % Description
+
+%------------------------------------------------
+
+\jobentry
+	{Jul 1982 -- Dec 1984} % Duration
+	{PT} % FT/PT (full time or part time)
+	{WashPests Limited} % Employer
+	{Pest Control Technician} % Job title
+	{In this summer job I was tasked with helping eradicate pests from industrial areas. Work involved setting traps, spraying and physical eradication. I received praise for reaching difficult areas and my innovative use of a crowbar to assist in my work.} % Description
+
+%----------------------------------------------------------------------------------------
+%	REFERENCES
+%----------------------------------------------------------------------------------------
+
+\section{References}
+
+%\textit{References available on request} % Uncomment if you'd rather not include references and remove the section below
+
+%------------------------------------------------
+
+% This section is laid out using a table. A \tableentry command adds lines with the following parameters:
+
+%\tableentry{Heading}{Content}{spaceafter}
+% All 3 parameters must be supplied but any can be empty if you don't need them
+% A "spaceafter" value in the third parameter will add some vertical space -- this is to be used between headings, leave it empty for no extra space
+
+%------------------------------------------------
+
+\begin{supertabular}{r l} % Start a table with two columns, the table will ensure everything is aligned
+
+	%------------------------------------------------
+
+	\tableentry{}{\textbf{Dr. Isaac Kleiner}}{spaceafter}
+	\tableentry{Position}{Professor}{}
+	\tableentry{Employer}{\href{https://web.mit.edu/physics/}{Department of Physics}}{}
+	\tableentry{}{\href{https://web.mit.edu}{\textit{Massachusetts Institute of Technology}}}{spaceafter}
+	\tableentry{Phone}{+1 (617) 253 1000 x5322 (Work)}{}
+	\tableentry{Mobile}{+1 (232) 842-3583}{}
+
+	%------------------------------------------------
+
+	\\ % Additional vertical whitespace between the references
+
+	%------------------------------------------------
+
+	\tableentry{}{\textbf{Dr. Eli Vance}}{spaceafter}
+	\tableentry{Position}{Scientist (HL1)}{}
+	\tableentry{Employer}{\href{http://www.bmrf.us}{Black Mesa Research Facility}}{spaceafter}
+	\tableentry{Email}{\href{mailto:e.vance@bmrf.us}{e.vance@bmrf.us}}{}
+	\tableentry{Phone}{+1 (800) 786-1410 x6235 (Work)}{}
+	\tableentry{Mobile}{+1 (201) 632-3901}{}
+
+	%------------------------------------------------
+
+\end{supertabular}
+
+\medskip % Extra vertical whitespace before the next section
+
+%----------------------------------------------------------------------------------------
 
 %----------------------------------------------------------------------------------------
 %	EDUCATION
 %----------------------------------------------------------------------------------------
 
-\cvsect{Education}
+\section{Education}
 
-\begin{entrylist}
-	\entry
-		{2018 -- 2021}
-		{Computer Systems Engineering}
-		{TSHWANE UNIVERSITY OF TECHNOLOGY}
-		{
-            During the Computer Systems Engineering programme, I have refined my skills in
-            programming, electronics, databases, and process control, all of which are
-            essential for success in the industry. The programme's emphasis is on
-            industry-aligned hands-on experiences.
-        }
-	\entry
-		{2013}
-        {Grade 12 (Matric)}
-		{SINCOBILE SECONDARY SCHOOL}
-		{
-            Major: Physics, Mathematics, Life Sciences, – Achieve a distinction in Mathematics and levels 6 and 5 in the rest of the subjects
-        }
-\end{entrylist}
+% Each qualification entry is added with a \qualificationentry command. Below is an empty one to use as a template:
+
+%\qualificationentry
+%	{} % Duration
+%	{} % Degree
+%	{} % Honors, achievements or distinctions (e.g. first class honors)
+%	{} % Department
+%	{} % Institution
+
+% All 5 parameters must be supplied but any can be empty if you don't need them
+
+%------------------------------------------------
+
+\begin{supertabular}{r l} % Start a table with two columns, the table will ensure everything is aligned
+
+	%------------------------------------------------
+
+	\qualificationentry
+		{1986 -- 1990} % Duration
+		{Doctor of Philosophy} % Degree
+		{} % Honors, achievements or distinctions (e.g. first class honors)
+		{Theoretical Physics} % Department
+		{Massachusetts Institute of Technology} % Institution
+
+	%------------------------------------------------
+
+	\qualificationentry
+		{1985} % Duration
+		{Master of Science} % Degree
+		{First Class Honors} % Honors, achievements or distinctions (e.g. first class honors)
+		{Theoretical Physics} % Department
+		{Massachusetts Institute of Technology} % Institution
+
+	%------------------------------------------------
+
+	\qualificationentry
+		{1982 -- 1984} % Duration
+		{Bachelor of Physics} % Degree
+		{} % Honors, achievements or distinctions (e.g. first class honors)
+		{Department of Physics} % Department
+		{The University of Washington} % Institution
+
+	%------------------------------------------------
+
+\end{supertabular}
 
 %----------------------------------------------------------------------------------------
-%	ADDITIONAL INFORMATION
+%	AWARDS
 %----------------------------------------------------------------------------------------
-% \href{https://www.credly.com/badges/80f2454f-f8de-4e74-9575-a01edf459fde}{https://cutt.ly/DRI8NYP}
 
-\begin{minipage}[t]{0.5\textwidth}
-	\vspace{-\baselineskip} % Required for vertically aligning minipages
-	\cvsect{Projects}
+\section{Awards}
 
-	\textbf{\href{http://178.79.147.9:50/}{Carpentry Shop - Net Core Web Application} } \\
-    - Placed Carpentry Orders and Collect \\
-	\textbf{\href{https://cell-phone-store.netlify.app/}{Online Cellphone Store } } \\
-    - A Demo Online Website that sells Cellphones. \\
-	\textbf{\href{Matric Dashboard}{Matric Dashboard} } \\
-    - WIP, Tracking Matric pass rate
+% This section is laid out using a table. A \tableentry command adds lines with the following parameters:
 
-\end{minipage}
-\hfill
-\begin{minipage}[t]{0.5\textwidth}
-	\vspace{-\baselineskip} % Required for vertically aligning minipages
-	\cvsect{Certificate}
+%\tableentry{Heading}{Content}{spaceafter}
+% All 3 parameters must be supplied but any can be empty if you don't need them
+% A "spaceafter" value in the third parameter will add some vertical space -- this is to be used between headings, leave it empty for no extra space
 
-	\textbf{\href{https://www.credly.com/badges/80f2454f-f8de-4e74-9575-a01edf459fde}{Azure DevOps Engineer Expert} } - issued: 8 October 2021\\
-	\textbf{\href{https://www.credly.com/badges/2b9449fa-ea3c-4baa-9362-2b1c6f69636e}{Azure Developer Associate} } - issued: 8 July 2021\\
-	\textbf{\href{https://www.credly.com/badges/eb7f2969-df90-4138-b898-bcb9f57389e1}{Azure Fundamentals} } - issued: 26 April 2021
-\end{minipage}
+%------------------------------------------------
 
+\begin{supertabular}{r l} % Start a table with two columns, the table will ensure everything is aligned
+
+	%------------------------------------------------
+
+	\tableentry{1985}{\textbf{Faculty of Science Masters Scholarship}}{}
+	\tableentry{}{\textit{Massachusetts Institute of Technology}}{spaceafter}
+
+	%------------------------------------------------
+
+	\tableentry{1983}{\textbf{Top Achiever Award -- Physics}}{}
+	\tableentry{}{\textit{The University of Washington}}{spaceafter}
+
+	%------------------------------------------------
+
+\end{supertabular}
+
+%----------------------------------------------------------------------------------------
+%	COMPUTER SKILLS
+%----------------------------------------------------------------------------------------
+
+\section{Computer Skills}
+
+% This section is laid out using a table. A \tableentry command adds lines with the following parameters:
+
+%\tableentry{Heading}{Content}{spaceafter}
+% All 3 parameters must be supplied but any can be empty if you don't need them
+% A "spaceafter" value in the third parameter will add some vertical space -- this is to be used between headings, leave it empty for no extra space
+
+%------------------------------------------------
+
+\begin{supertabular}{r l} % Start a table with two columns, the table will ensure everything is aligned
+
+	%------------------------------------------------
+
+	\tableentry{Beginner}{Java, MS DOS}{spaceafter}
+
+	%------------------------------------------------
+
+	\tableentry{Intermediate}{Javascript, Python, HTML, CSS,}{}
+	\tableentry{}{Microsoft Windows}{}
+	\tableentry{}{Computer Hardware \& Support}{spaceafter}
+
+	%------------------------------------------------
+
+	\tableentry{Expert}{Perl, Unix, \LaTeX}{spaceafter}
+
+	%------------------------------------------------
+
+\end{supertabular}
+
+%----------------------------------------------------------------------------------------
+%	COMMUNICATION SKILLS
+%----------------------------------------------------------------------------------------
+
+\section{Communication Skills}
+
+% This section is laid out using a table. A \tableentry command adds lines with the following parameters:
+
+%\tableentry{Heading}{Content}{spaceafter}
+% All 3 parameters must be supplied but any can be empty if you don't need them
+% A "spaceafter" value in the third parameter will add some vertical space -- this is to be used between headings, leave it empty for no extra space
+
+%------------------------------------------------
+
+\begin{supertabular}{r l} % Start a table with two columns, the table will ensure everything is aligned
+
+	%------------------------------------------------
+
+	\tableentry{Conferences}{Oral Presentation at the Annual MIT}{}
+	\tableentry{}{Theoretical Physics Conference -- 1987}{spaceafter}
+
+	%------------------------------------------------
+
+	\tableentry{Posters}{Poster at the Meeting of the American}{}
+	\tableentry{}{Physical Society -- 1985}{spaceafter}
+
+	%------------------------------------------------
+
+\end{supertabular}
+
+%----------------------------------------------------------------------------------------
+%	SKILLS DESCRIPTION
+%----------------------------------------------------------------------------------------
+
+\section{Skills}
+
+\subsection{Goal Oriented}
+
+I believe in action over long-winded discussions. I listen to everyone's viewpoints and use my judgement to immediately act based on consensus to achieve goals quickly and efficiently.
+
+\subsection{Physical Dexterity}
+
+Manual manipulation of experimental equipment and training within Black Mesa (e.g. the Hazard Course) have contributed to an enjoyment of working with my hands.
+
+\subsection{Passionate}
+
+I have been interested in theoretical physics such as quantum mechanics and relativity from an early age. My education and research have cemented this interest into a passion. I greatly enjoy carrying out fundamental physics research with potential practical applications.
+
+%----------------------------------------------------------------------------------------
+%	PUBLICATIONS
+%----------------------------------------------------------------------------------------
+
+\section{Publications}
+
+%------------------------------------------------
+
+\textbf{Freeman, G. R.} (1996). Chemistry of Multiply Charged Negative Molecular Ions and Clusters in the Gas Phase:  Terrestrial and in Intense Galactic Magnetic Fields. \textit{The Journal of Physical Chemistry}, \textit{100}(11), 4331-4338.
+
+\medskip % Vertical whitespace
+
+Jacobsen, F. M., Gee, N., \textbf{Freeman, G. R.} (1986). Electron mobility in liquid krypton as function of density, temperature, and electric field strength. \textit{Physical Review A}, \textit{34}(3): 2329-2335.
+
+\medskip % Vertical whitespace
+
+%------------------------------------------------
+
+% As an alternative to a long-form publication list, you can create a shorter summary using only DOI values and years.
+
+% Example \doipublication{} command to add another publication:
+
+%\doipublication{Year}{DOI}{firstauthor}{spaceafter}
+
+% All four parameters are required (can be empty though)
+% A value of "firstauthor" in the third parameter will output the DOI in bold
+% A "spaceafter" value in the fourth parameter will add some vertical space -- this is to be used between years
+
+%------------------------------------------------
+
+\subsection{Publications by DOI}
+
+\begin{supertabular}{r l} % Start a table with two columns, the table will ensure everything is aligned
+
+	%------------------------------------------------
+
+	\doipublication{1996}{10.1021/jp951483+}{firstauthor}{spaceafter}
+
+	%------------------------------------------------
+
+	\doipublication{1990}{10.1139/p90-097}{firstauthor}{spaceafter}
+
+	%------------------------------------------------
+
+	\doipublication{1986}{10.1139/v86-297}{}{}
+	\doipublication{}{10.1103/PhysRevA.34.2329}{}{spaceafter}
+
+	%------------------------------------------------
+
+	& \textit{First author publications in} \textbf{bold}\\
+
+	%------------------------------------------------
+
+\end{supertabular}
+
+\medskip % Extra whitespace before the next section
+
+%----------------------------------------------------------------------------------------
+
+
+%----------------------------------------------------------------------------------------
 
 \end{document}
