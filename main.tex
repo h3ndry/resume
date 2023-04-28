@@ -26,7 +26,7 @@
 %----------------------------------------------------------------------------------------
 
 \documentclass[
-	12pt, % Default font size, can be between 8pt and 12pt
+	11pt, % Default font size, can be between 8pt and 12pt
 ]{FreemanCV}
 
 \usepackage{enumitem}
@@ -38,7 +38,7 @@
 % Example right footer:
 %\rfoot{\textcolor{headings}{\sffamily Last update: \today. Typeset with Xe\LaTeX}}
 
-%----------------------------------------------------------------------------------------
+%--------------------------------------------------------------------------------Libre Baskerville--------
 
 \begin{document}
 
@@ -51,21 +51,21 @@
 \parbox[][0.11\textheight][c]{\linewidth}{ % Box to hold your name and CV title; change the fixed height as needed to match the colored box to the right
 	\centering % Horizontally center text
 
-	{\sffamily\Huge Simanga H. Khoza} % Your name
 
 	\medskip % Vertical whitespace
+	\medskip % Vertical whitespace
+	{\sffamily\Huge Simanga H. Khoza} % Your name
+
+	\medskip
 
 	{\cursivefont\Huge\textcolor{headings}{Curriculum Vitae}}
 
-	\vfill % Push content to the top of the box
+	\vfill
 }
 \switchcolumn
-%----------------------------------------------------------------------------------------
-%	COLORED CONTACT DETAILS BOX
-%----------------------------------------------------------------------------------------
 
-\parbox[top][0.11\textheight][c]{\linewidth}{ % Box to hold the colored box; change the fixed height as needed to match the box to the left
-	\colorbox{shade}{ % Create colored box and specify background color
+\parbox[top][0.11\textheight][c]{\linewidth}{
+	\colorbox{shade}{
 		\begin{supertabular}{@{\hspace{3pt}} p{0.05\linewidth} | p{0.775\linewidth}} % Start a table with two columns, the table will ensure everything is aligned
 			\raisebox{-1pt}{\faMapPin} & Guateng Pretoria\\ % Address
 			\raisebox{-1pt}{\faPhone} & +27 81 249 0306 \\ % Phone number
@@ -73,36 +73,23 @@
 			\raisebox{-1pt}{\small\faGlobe} & \href{https://h3ndry.me/}{https://h3ndry.me/} \\ % Website
 			\raisebox{-1pt}{\faGithub} & \href{https://github.com/h3ndry}{https://github.com/h3ndry} \\ % GitHub profile
 			\raisebox{-1pt}{\faLinkedin} & \href{https://www.linkedin.com/in/h3ndry/}{https://www.linkedin.com/in/h3ndry} \\ % LinkedIn profile
-			% See fontawesome.pdf in the Fonts folder for all icons you can use
 		\end{supertabular}
 	}
-	\vfill % Push content to the top of the box
+	\vfill
 }
-
 \medskip
-\end{paracol} % End two-column mode
+\end{paracol}
 
 
-
-
-
-%----------------------------------------------------------------------------------------
-%	MAJOR RESEARCH PROJECT
-%----------------------------------------------------------------------------------------
 
 \section{Skills \& Technologies}
 
-% {\raggedright\textbf{``Observation of Einstein-Podolsky-Rosen Entanglement on Supraquantum Structures by Induction Through Nonlinear Transuranic Crystal of Extremely Long Wavelength Pulse from Mode-Locked Source Array"}\par}
-
-\begin{supertabular}{r l} % Start a table with two columns, the table will ensure everything is aligned
-    \tableentry{LANGUAGES}{TypeScript, JavaScript, C\#, C++, React, .NET Core, Python, CSS, HTML, CSS}{spaceafter}
-	\tableentry{TECHNOLOGIES}{Javascript, Python, HTML, CSS,}{}
-	\tableentry{}{Microsoft Windows}{}
-	\tableentry{}{Computer Hardware \& Support}{spaceafter}
-	\tableentry{DATABASES}{Perl, Unix, \LaTeX}{spaceafter}
+\begin{supertabular}{r l}
+    \tableentry{LANGUAGES}{\LaTeX,TypeScript,  JavaScript, C\#, C++, React, .NET Core, Python, CSS, HTML, CSS}{spaceafter}
+	\tableentry{TECHNOLOGIES}{DevOps, Git, NextJS, Firebase, Postman, NodeJS, Bash }{}
+	\tableentry{}{Linux, Neovim, Kubernetes }{}
+	\tableentry{DATABASES}{MySQL, Postgres, SQL Servers, Oracle DB}{spaceafter}
 \end{supertabular}
-
-
 
 
 %----------------------------------------------------------------------------------------
@@ -111,52 +98,57 @@
 
 \section{Work Experience}
 
-% Each job is added with a \jobentry command. Below is an empty one to use as a template:
+{
 
-%\jobentry
-%	{} % Duration
-%	{} % FT/PT (full time or part time)
-%	{} % Employer
-%	{} % Job title
-%	{} % Description
-
-% All 5 parameters must be supplied but any can be empty if you don't need them
-
-%------------------------------------------------
 
 \jobentry
-	{Kriterion} % Company name
-	{Current, from Jan 1995} % Duration
-	{FT} % FT/PT (full time or part time)
-    {Software Engineer (FullStack)} % Job title
+	{KRITERION}
+	{Current, from Jun 2021}
+	{FT}
+    {Software Engineer (Full-Stack)}
+    {
+    \begin{itemize}
+        \item  Developed and maintained full-stack web applications using \textbf{Python} (FastAPI), \textbf{Bash}, \textbf{SQL}, and \textbf{TypeScript} (React).
+        \item  Proficient in containerization and deployment technologies such as \textbf{Docker} and \textbf{Kubernetes}.
+        \item  Deployed and maintained software systems on cloud platforms like \textbf{AWS}, ensuring high availability and scalability.
+        \item  Improved developer experience by creating a Bash script to automate the cloning of \textbf{Gitlab} repositories and streamline the development process.
+        \item  Practised test-driven development by developing test automation scripts, resulting in improved software quality and faster delivery.
+        \item    Skilled in writing unit tests using Jest and React-Testing Library to ensure the reliability and functionality of code.
+    \end{itemize}
+    }
+
+
+\jobentry
+	{\hspace{-0.65cm}COPALCOR (Pty) Ltd}
+	{Current, from Jan 1995}
+	{FT}
+    {.Net Software Developer}
     {
         \begin{itemize}
-            \item As part of this promotion, I began conducting nuclear and subatomic
-            \item research in the Anomalous Materials department. My team and I are
-            \item particularly interested in dimensionality and its interaction with
-            \item spacetime. The focus is on practical outcomes and applications in
-            \item teleportation and communication with distal locations.
+         \item    Worked as a web developer on a \textbf{.NET Core} web application, involved in the initial phases of design analysis and elicitation of requirements using ML diagrams.
+         \item    Successfully deployed and maintained the web application on a Linux server hosted on Linode.
+         \item    Designed and developed user interaction screens with HTML, CSS3, Bootstrap, JavaScript to create efficient and user-friendly designs.
         \end{itemize}
+}
+\par
 
-} % Description
-
-%------------------------------------------------
-
-\jobentry
-	{Feb 1991 -- Jan 1995} % Duration
-	{FT} % FT/PT (full time or part time)
-	{Black Mesa Research Facility} % Employer
-	{Level 3 Research Associate} % Job title
-	{This position involved transitioning from purely theoretical work to experimental applications utilising the immense resources of Black Mesa. The transition required an initial learning curve in hazard containment, health and safety procedures and operating experimental infrastructure. Manipulating valves, carts, buttons, levers, etc considerably increased my physical fitness.} % Description
-
-%------------------------------------------------
 
 \jobentry
-	{Jul 1982 -- Dec 1984} % Duration
-	{PT} % FT/PT (full time or part time)
-	{WashPests Limited} % Employer
-	{Pest Control Technician} % Job title
-	{In this summer job I was tasked with helping eradicate pests from industrial areas. Work involved setting traps, spraying and physical eradication. I received praise for reaching difficult areas and my innovative use of a crowbar to assist in my work.} % Description
+	{\hspace{-0.65cm}HORIZON HR}
+	{Current, from Jan 1995}
+	{FT}
+    {.NET Developer Intern}
+    {
+        \begin{itemize}
+         \item  Participated in the maintenance phase of a \textbf{.NET Web API} project.
+         \item  Developed Tests for Unit testing of the developed components using the N Unit Testing Framework.
+         \item  Involved in Application Support and releasing the fixes.
+         \item  Provide software support to end-users
+         \item  Develop Front-End Applications using and React
+        \end{itemize}
+}
+
+
 
 %----------------------------------------------------------------------------------------
 %	REFERENCES

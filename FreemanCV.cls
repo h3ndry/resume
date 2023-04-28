@@ -169,7 +169,7 @@
 
 % Command for adding a new job entry (work experience)
 \newcommand{\jobentry}[5]{
-    {\textsc{\large{#1}\expandafter\ifstrequal\expandafter{#2}{}{}\hfill\small{#2}}} % Duration and conditional full time/part time text
+    {\textsc{\LARGE{#1}\expandafter\ifstrequal\expandafter{#2}{}{}\hfill\small{#2}}} % Duration and conditional full time/part time text
     \expandafter\ifstrequal\expandafter{#3}{}{}{{\raggedright\footnotesize{(#3)}}\\} % Employer
 	\expandafter\ifstrequal\expandafter{#4}{}{}{{\raggedright\large\textit{\textbf{#4}}}} % Job title
 	\expandafter\ifstrequal\expandafter{#5}{}{}{#5} % Description
