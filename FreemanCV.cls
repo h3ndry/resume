@@ -45,10 +45,10 @@
 
 \usepackage[
 	a4paper, % Paper size
-	top=1cm, % Top margin
+	top=0.5cm, % Top margin
 	bottom=0.5cm, % Bottom margin
-	left=1.5cm, % Left margin
-	right=1.5cm, % Right margin
+	left=1cm, % Left margin
+	right=1cm, % Right margin
 	footskip=1cm, % Space from the bottom margin to the baseline of the footer
 	headsep=0.5cm, % Space from the top margin to the baseline of the header
 	headheight=1cm, % Height of the header
@@ -169,11 +169,10 @@
 
 % Command for adding a new job entry (work experience)
 \newcommand{\jobentry}[5]{
-    {\textsc{\LARGE{#1}\expandafter\ifstrequal\expandafter{#2}{}{}\hfill\small{#2}}} % Duration and conditional full time/part time text
+    {#1\expandafter\ifstrequal\expandafter{#2}{}{}\hfill\small{#2}} % Duration and conditional full time/part time text
     \expandafter\ifstrequal\expandafter{#3}{}{}{{\raggedright\footnotesize{(#3)}}\\} % Employer
 	\expandafter\ifstrequal\expandafter{#4}{}{}{{\raggedright\large\textit{\textbf{#4}}}} % Job title
 	\expandafter\ifstrequal\expandafter{#5}{}{}{#5} % Description
-	\medskip % Vertical whitespace
 	\medskip % Vertical whitespace
 }
 
