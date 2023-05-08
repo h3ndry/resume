@@ -130,7 +130,7 @@
 \titleformat
 	{\subsection} % Section type being modified
 	[block] % Section layout type, can be: hang, block, display, runin, leftmargin, rightmargin, drop, wrap, frame
-	{\itshape} % Text formatting of the whole section, i.e. label and title
+	{} % Text formatting of the whole section, i.e. label and title
 	{} % Section label (e.g. number) and its formatting
 	{0pt} % Horizontal space between the section label and title
 	{} % Code before the section title

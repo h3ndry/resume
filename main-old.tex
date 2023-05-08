@@ -1,0 +1,177 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Developer CV
+% LaTeX Template
+% Version 1.0 (28/1/19)
+%
+% This template originates from:
+% http://www.LaTeXTemplates.com
+%
+% Authors:
+% Jan Vorisek (jan@vorisek.me)
+% Based on a template by Jan Küster (info@jankuester.com)
+% Modified for LaTeX Templates by Vel (vel@LaTeXTemplates.com)
+%
+% License:
+% The MIT License (see included LICENSE file)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[10pt]{developercv} % Default font size, values from 8-12pt are recommended
+\usepackage[none]{hyphenat}
+
+\begin{document}
+
+%----------------------------------------------------------------------------------------
+%	TITLE AND CONTACT INFORMATION
+%----------------------------------------------------------------------------------------
+
+\begin{minipage}[t]{0.45\textwidth} % 45% of the page width for name
+	\vspace{-\baselineskip} % Required for vertically aligning minipages
+
+	\colorbox{black!10}{{\HUGE\textcolor{black}{\textbf{\MakeUppercase{Hendry}}}}} % First name
+
+	\colorbox{black!10}{{\HUGE\textcolor{black}{\textbf{\MakeUppercase{Khoza}}}}} % Last name
+
+	\vspace{6pt}
+
+	{\huge Software Engineer} % Career or current job title
+\end{minipage}
+\begin{minipage}[t]{0.275\textwidth} % 27.5% of the page width for the first row of icons
+	\vspace{-\baselineskip} % Required for vertically aligning minipages
+
+	\icon{MapMarker}{12}{Guateng Pretoria}\\
+	\icon{Phone}{12}{+27 81 249 0306}\\
+	\icon{At}{12}{\href{mailto:h3khoza@gmail.com}{h3khoza@gmail.com}}\\
+\end{minipage}
+\begin{minipage}[t]{0.275\textwidth} % 27.5% of the page width for the second row of icons
+	\vspace{-\baselineskip} % Required for vertically aligning minipages
+
+	% The first parameter is the FontAwesome icon name, the second is the box size and the third is the text
+	% Other icons can be found by referring to fontawesomhttps://chat.openai.com/chate.pdf (supplied with the template) and using the word after \fa in the command for the icon you want
+	\icon{Globe}{12}{\href{https://h3ndry.me/}{https://h3ndry.me}}\\
+	\icon{Github}{12}{\href{https://github.com/h3ndry}{github.com/h3ndry}}\\
+	\icon{Linkedin}{12}{\href{https://www.linkedin.com/in/h3ndry/}{linkedin.com/in/h3ndry}}\\
+\end{minipage}
+
+\vspace{0.5cm}
+
+%----------------------------------------------------------------------------------------
+%	INTRODUCTION, SKILLS AND TECHNOLOGIES
+%----------------------------------------------------------------------------------------
+
+\cvsect{Skills}
+
+\setlength{\tabcolsep}{0.4em}
+\begin{tabular}{ r l}
+    \cvsectt{LANGUAGES} & \cvtag{TypeScript} \cvtag{JavaScript} \cvtag{C\#} \cvtag{C++} \cvtag{React}  \cvtag{.NET Core} \cvtag{Python}  \cvtag{HTML} \cvtag{CSS} \cvtag{SQL}  \vspace{0.3em} \\
+    \cvsectt{TECHNOLOGIES} & \cvtag{Agile} \cvtag{SDLC} \cvtag{DevOps} \cvtag{Kubernetes}\cvtag{Docker}  \cvtag{Git} \cvtag{NextJS} \cvtag{Firebase} \vspace{0.3em} \\
+    \cvsectt{Cloud} & \cvtag{Azure} \cvtag{GCloud} \cvtag{AWS} \cvtag{CI/CD} \cvtag{TDD} \vspace{0.3em} \\
+\cvsectt{DATABASES } & \cvtag{MySQL} \cvtag{Postgres} \cvtag{SQL Servers} \cvtag{Oracle DB}   \vspace{0.3em} \\ \vspace{0.3em} \\
+\end{tabular}
+
+
+
+%----------------------------------------------------------------------------------------
+%	EXPERIENCE
+%----------------------------------------------------------------------------------------
+
+\cvsect{Experience}
+
+\begin{entrylist}
+	\entry
+		{08/2021 -- current\\\footnotesize{permanent}}
+		{Software Engineer}
+		{KRITERION}
+		{
+            Developed and maintained full-stack web applications using \textbf{Python} (FastAPI), \textbf{Bash}, \textbf{SQL}, and \textbf{TypeScript} (React).
+            Proficient in containerization and deployment technologies such as \textbf{Docker} and \textbf{Kubernetes}.
+            Deployed and maintained software systems on cloud platforms like \textbf{AWS}, ensuring high availability and scalability.
+            Improved developer experience by creating a Bash script to automate the cloning of \textbf{Gitlab} repositories and streamline the development process.
+            Practised test-driven development by developing test automation scripts, resulting in improved software quality and faster delivery.
+            Skilled in writing unit tests using Jest and React-Testing Library to ensure the reliability and functionality of code.\\
+            \texttt {node.js}\slashsep\texttt{React}\slashsep\texttt{Python}\slashsep\texttt{Docker}\slashsep\texttt{SQL}
+        }
+	\entry
+		{01/2021 -- 08/2021 \\\footnotesize{contract}}
+		{Software Developer}
+		{COPALCOR (Pty) Ltd}
+		{
+            Worked as a web developer on a \textbf{.NET Core} web application, involved in the initial phases of design analysis and elicitation of requirements using ML diagrams.
+            Successfully deployed and maintained the web application on a Linux server hosted on Linode.
+            Designed and developed user interaction screens with HTML, CSS3, Bootstrap, JavaScript to create efficient and user-friendly designs.\\
+            \texttt{Git} \slashsep\texttt{.Net Core}\slashsep\texttt{MariaDB}\slashsep\texttt{Linux} \slashsep\texttt{Git}
+        }
+
+	\entry
+		{11/2019 -- 12/2020 \\\footnotesize{internship}}
+		{.NET Developer Intern}
+		{HORIZON HR}
+		{
+            Participated in the maintenance phase of a \textbf{.NET Web API} project.
+            Developed Tests for Unit testing of the developed components using the N Unit Testing Framework.
+            Involved in Application Support and releasing the fixes.
+            Provide software support to end-users
+            Develop Front-End Applications using and React \\
+            \texttt{.NET Core} \slashsep\texttt{SQL} \slashsep\texttt{JavaScript} \slashsep\texttt{React}
+    }
+\end{entrylist}
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION
+%----------------------------------------------------------------------------------------
+
+\cvsect{Education}
+
+\begin{entrylist}
+	\entry
+		{2018 -- 2021}
+		{Computer Systems Engineering}
+		{TSHWANE UNIVERSITY OF TECHNOLOGY}
+		{
+            During the Computer Systems Engineering programme, I have refined my skills in
+            programming, electronics, databases, and process control, all of which are
+            essential for success in the industry. The programme's emphasis is on
+            industry-aligned hands-on experiences.
+        }
+	\entry
+		{2013}
+        {Grade 12 (Matric)}
+		{SINCOBILE SECONDARY SCHOOL}
+		{
+            Major: Physics, Mathematics, Life Sciences, – Achieve a distinction in Mathematics and levels 6 and 5 in the rest of the subjects
+        }
+\end{entrylist}
+
+%----------------------------------------------------------------------------------------
+%	ADDITIONAL INFORMATION
+%----------------------------------------------------------------------------------------
+% \href{https://www.credly.com/badges/80f2454f-f8de-4e74-9575-a01edf459fde}{https://cutt.ly/DRI8NYP}
+
+\begin{minipage}[t]{0.5\textwidth}
+	\vspace{-\baselineskip} % Required for vertically aligning minipages
+	\cvsect{Projects}
+
+	\textbf{\href{http://178.79.147.9:50/}{Carpentry Shop - Net Core Web Application} } \\
+    - Placed Carpentry Orders and Collect \\
+	\textbf{\href{https://cell-phone-store.netlify.app/}{Online Cellphone Store } } \\
+    - A Demo Online Website that sells Cellphones. \\
+	\textbf{\href{Matric Dashboard}{Matric Dashboard} } \\
+    - WIP, Tracking Matric pass rate
+
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.5\textwidth}
+	\vspace{-\baselineskip} % Required for vertically aligning minipages
+	\cvsect{Certificate}
+
+	\textbf{\href{https://www.credly.com/badges/80f2454f-f8de-4e74-9575-a01edf459fde}{Azure DevOps Engineer Expert} } - issued: 8 October 2021\\
+	\textbf{\href{https://www.credly.com/badges/2b9449fa-ea3c-4baa-9362-2b1c6f69636e}{Azure Developer Associate} } - issued: 8 July 2021\\
+	\textbf{\href{https://www.credly.com/badges/eb7f2969-df90-4138-b898-bcb9f57389e1}{Azure Fundamentals} } - issued: 26 April 2021
+\end{minipage}
+
+
+\end{document}
