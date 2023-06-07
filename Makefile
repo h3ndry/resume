@@ -1,8 +1,8 @@
 build: main.tex developercv.cls
 	xelatex -jobname=hendry_khoza_resume main.tex
 	pdftk hendry_khoza_resume.pdf \
-	./docs/graduation_letter.pdf \
-	./docs/university_transcript_certified.pdf \
+	./docs/ND_computer_system_certificatew.pdf \
+	./docs/computer_system_transcript.pdf \
 	./docs/matric_results.pdf \
 	./docs/id_certified.pdf \
 	cat output hendry_khoza_cv.pdf
