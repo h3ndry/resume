@@ -1,31 +1,10 @@
-%%%%%%%%%%%%%%%%%
-% This is an sample CV template created using altacv.cls
-% (v1.6, 21 May 2021) written by LianTze Lim (liantze@gmail.com). Now compiles with pdfLaTeX, XeLaTeX and LuaLaTeX.
-%
-%% It may be distributed and/or modified under the
-%% conditions of the LaTeX Project Public License, either version 1.3
-%% of this license or (at your option) any later version.
-%% The latest version of this license is in
-%%    http://www.latex-project.org/lppl.txt
-%% and version 1.3 or later is part of all distributions of LaTeX
-%% version 2003/12/01 or later.
-%%%%%%%%%%%%%%%%
-
-%% Use the "normalphoto" option if you want a normal photo instead of cropped to a circle
-% \documentclass[10pt,a4paper,normalphoto]{altacv}
 
 \documentclass[14pt,a4paper,ragged2e,withhyper]{altacv}
-%% AltaCV uses the fontawesome5 and packages.
-%% See http://texdoc.net/pkg/fontawesome5 for full list of symbols.
 
-% Change the page layout if you need to
 \geometry{left=0.7cm,right=0.6cm,top=1cm,bottom=1cm,columnsep=0.5cm}
 
-% The paracol package lets you typeset columns of text in parallel
 \usepackage{paracol}
 
-% Change the font if you want to, depending on whether
-% you're using pdflatex or xelatex/lualatex
 \ifxetexorluatex
   % If using xelatex or lualatex:
   \setmainfont{Roboto Slab}
@@ -39,7 +18,6 @@
   \renewcommand{\familydefault}{\sfdefault}
 \fi
 
-% Change the colours if you want to
 \definecolor{SlateGrey}{HTML}{2E2E2E}
 \definecolor{LightGrey}{HTML}{666666}
 \definecolor{DarkPastelRed}{HTML}{450808}
@@ -54,34 +32,20 @@
 \colorlet{emphasis}{SlateGrey}
 \colorlet{body}{black}
 
-% Change some fonts, if necessary
 \renewcommand{\namefont}{\Huge\rmfamily\bfseries}
 \renewcommand{\personalinfofont}{\normalsize}
 \renewcommand{\cvsectionfont}{\LARGE\rmfamily\bfseries}
 \renewcommand{\cvsubsectionfont}{\large\bfseries}
 
-% Change the bullets for itemize and rating marker
-% for \cvskill if you want to
 \renewcommand{\itemmarker}{{\textbullet}}
 \renewcommand{\ratingmarker}{\faCircle}
-%% Use (and optionally edit if necessary) this .tex if you
-%% want to use an author-year reference style like APA(6)
-%% for your publication list
 \input{pubs-authoryear}
 
-%% Use (and optionally edit if necessary) this .tex if you
-%% want an originally numerical reference style like IEEE
-%% for your publication list
-% \input{pubs-num}
 
-%% sample.bib contains your publications
 \addbibresource{sample.bib}
 \begin{document}
 \name{Simanga H. Khoza}
 \tagline{}
-%% You can add multiple photos on the left or right
-% \photoR{2.8cm}{Globe_High}
-% \photoL{2.5cm}{Yacht_High,Suitcase_High}
 
 \personalinfo{%
   % Not all of these are required!
@@ -115,23 +79,10 @@
 }
 
 \makecvheader
-%% Depending on your tastes, you may want to make fonts of itemize environments slightly smaller
-% \AtBeginEnvironment{itemize}{\small}
 
-%% Set the left/right column width ratio to 6:4.
 \columnratio{0.60}
 
-% Start a 2-column paracol. Both the left and right columns will automatically
-% break across pages if things get too long.
 \begin{paracol}{2}
-
-% \cvsection{OBJECTIVE}
-%
-% \begin{quote}
-%     Enthusiastic Computer Systems Engineer with a passion for technology
-%     seeking an Javascript Software Developer SovTech. Overall I am willing to learn new
-%     things, I have a desire for self-improvement and a strong work ethic.
-% \end{quote}
 
 
 \cvsection{Experience}
@@ -185,56 +136,6 @@
 \end{itemize}
 
 
-% \medskip
-
-% \cvsection{A Day of My Life}
-%
-% % Adapted from @Jake's answer from http://tex.stackexchange.com/a/82729/226
-% % \wheelchart{outer radius}{inner radius}{
-% % comma-separated list of value/text width/color/detail}
-% \wheelchart{1.5cm}{0.5cm}{%
-%   6/8em/accent!30/{Sleep,\\beautiful sleep},
-%   3/8em/accent!40/Hopeful novelist by night,
-%   8/8em/accent!60/Daytime job,
-%   2/10em/accent/Sports and relaxation,
-%   5/6em/accent!20/Spending time with family
-% }
-
-% \begin{itemize}[font=\color{accent},widest=\faCode]
-% \color{emphasis}
-% \item[\faPlaneDeparture] Travelling
-% \item[\faCode] Coding for leisure
-% \end{itemize}
-
-% use ONLY \newpage if you want to force a page break for
-% ONLY the current column
-% \newpage
-
-% \cvsection{Publications}
-%
-% \nocite{*}
-%
-% \printbibliography[heading=pubtype,title={\printinfo{\faBook}{Books}},type=book]
-%
-% \divider
-%
-% \printbibliography[heading=pubtype,title={\printinfo{\faFile*[regular]}{Journal Articles}},type=article]
-%
-% \divider
-%
-% \printbibliography[heading=pubtype,title={\printinfo{\faUsers}{Conference Proceedings}},type=inproceedings]
-
-%% Switch to the right column. This will now automatically move to the second
-%% page if the content is too long.
-\switchcolumn
-
-
-% \begin{supertabular}{r l}
-%     \tableentry{LANGUAGES}{\LaTeX, TypeScript, JavaScript, C\#, C++, React, .NET Core, Python, CSS, HTML, CSS}{spaceafter}
-% 	\tableentry{TECHNOLOGIES}{DevOps, Git, NextJS, Firebase, Postman, NodeJS, Bash }{}
-% 	\tableentry{}{Linux, Neovim, Kubernetes }{}
-% 	\tableentry{DATABASES}{MySQL, Postgres, SQL Servers, Oracle DB}{spaceafter}
-% \end{supertabular}
 
 \cvsection{SKILLS}
 
@@ -242,7 +143,6 @@
 \cvtag{C/C++} \cvtag{JavaScript}
 \cvtag{TypeScript} \cvtag{Python} \cvtag{MySql} \cvtag{C\#}
 \cvtag{NodeJS} \cvtag{SQL} \cvtag{C\#} \cvtag{SQL}
-% \cvtag{Lua} \cvtag{LaTex}
 
 \divider\smallskip
 
@@ -253,16 +153,6 @@
 \cvtag{NextJS} \cvtag{.Net Core} \cvtag{ASPnet} \cvtag{SQL}
  \cvtag{Agile} \cvtag{Postgres} \cvtag{Agile} \cvtag{git}
 
-% \cvevent{IT Support \& System Administrator Skills}{}{}{}
-% \begin{itemize}
-% % \item Windows Server
-% % \item Microsoft office
-% \item Firewall (Mimecast, Kerio, Mcafee)
-% \item Printers configuration and troubleshooting
-% \item Diagnosing and troubleshooting software and hardware issues
-% \item Repairing and replacing damaged computer and network components
-% \item Installing, configuring and maintaining software and hardware components of computer and network systems
-% \end{itemize}
 
 \cvsection{Project}
 
@@ -280,46 +170,7 @@
 
 \cvproj{Music web app}{Plays preview of the top songs from Spotify using REST API}{\href{https://magibela.netlify.app/}{magibela.netlify.app/}}
 
-% \cvtag{GraphQL} \cvtag{DevOps} \cvtag{Agile} \cvtag{REST} \\
-% \cvtag{API}
 
-%
-% \cvsection{Most Proud of}
-%
-% \cvachievement{\faTrophy}{Fantastic Achievement}{and some details about it}
-%
-%
-% \cvachievement{\faHeartbeat}{Another achievement}{more details about it of course}
-%
-% \divider
-%
-% \cvachievement{\faHeartbeat}{Another achievement}{more details about it of course}
-%
-% \cvsection{Strengths}
-%
-% \cvtag{Hard-working}
-% \cvtag{Eye for detail}\\
-% \cvtag{Motivator \& Leader}
-%
-% \divider\smallskip
-%
-% \cvtag{C++}
-% \cvtag{Embedded Systems}\\
-% \cvtag{Statistical Analysis}
-%
-% \cvsection{Languages}
-%
-% \cvskill{English}{5}
-% \divider
-%
-% \cvskill{Spanish}{4}
-% \divider
-%
-% \cvskill{German}{3.5} %% Supports X.5 values.
-%
-%% Yeah I didn't spend too much time making all the
-%% spacing consistent... sorry. Use \smallskip, \medskip,
-%% \bigskip, \vspace etc to make adjustments.
 \medskip
 
 
@@ -336,15 +187,6 @@
 \cvachievement{\faTrophy}{Microsoft Certified: Azure Fundamentals}{issued: \hspace{0em} 26 April 2021 \hspace{1cm} \href{https://www.credly.com/badges/eb7f2969-df90-4138-b898-bcb9f57389e1}{https://cutt.ly/sRI3GgJ} }
 
 
-% \cvsection{Referees}
-%
-% \cvref{Mpho Phahlamohlaka}{Colleague at University}{mphophahhh@gmail.com}
-% {064 891 7189}
-%
-% \divider
-%
-% \cvref{Tshepiso Williams}{Mentor at The Horizon}{tshepisowilliams@gmail.com}
-% {082 909 9506}
 
 
 \end{paracol}
