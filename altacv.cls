@@ -308,7 +308,7 @@
   \ifstrequal{#2}{}{}{
   {#2}\par
   \smallskip}
-  \ifstrequal{#3}{}{}{{\makebox[0.5\linewidth][l]{\faGlobe~#3}}}\par%
+  \ifstrequal{#3}{}{}{{\makebox[0.5\linewidth][l]{\faGlobe~\color{accent}#3}}}\par%
   \medskip\normalsize
 }
 
