@@ -34,6 +34,7 @@
 \newif\if@withhyper
 \DeclareOption{withhyper}{\@withhypertrue}
 \ProcessOptions\relax
+\usepackage{tabularx}
 
 \LoadClass{article}
 %% v1.3.2 Hopefully this helps make the PDF
@@ -287,16 +288,16 @@
   {\color{subheading}\cvsubsectionfont{#1}\par}\medskip
 }
 
-% v1.1.4: fixes inconsistent font size
 \newcommand{\cvevent}[4]{%
-  {\large\color{emphasis}#1\par}
-  \smallskip\normalsize
-  \ifstrequal{#2}{}{}{
-  \textbf{\color{accent}#2}\par
-  \smallskip}
-  \ifstrequal{#3}{}{}{{\small\makebox[0.5\linewidth][l]{\faCalendar~#3}}}%
-  \ifstrequal{#4}{}{}{{\small\makebox[0.5\linewidth][l]{\faMapMarker~#4}}}\par
-  \medskip\normalsize
+\begin{tabularx}{\linewidth}{Xr}
+    \large{\textbf{#1}} & \textit{#2}
+\end{tabularx}
+\begin{tabularx}{\linewidth}{Xr}
+    \large{\textbf{\color{accent}#3}} & \textit{#4}
+\smallskip
+\end{tabularx}
+% \smallskip\normalsize
+% \vspace{0.2cm}
 }
 
 
@@ -312,7 +313,7 @@
 }
 
 \newcommand{\cvachievement}[3]{%
-  \begin{tabularx}{\linewidth}{@{}p{2em} @{\hspace{1ex}} >{\raggedright\arraybackslash}X@{}}
+  \begin{tabularx}{\linewidth}{@{}p{2em} @{\hspace{1ex}} >{\raggedright\arraybackslash}l@{}}
   \multirow{2}{*}{\Large\color{accent}#1} & \bfseries\textcolor{emphasis}{#2}\\
   & #3
   \end{tabularx}%
